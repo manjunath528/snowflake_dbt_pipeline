@@ -1,0 +1,11 @@
+# Ignore compiled files
+target/
+dbt_packages/
+
+# IDE/OS junk
+.DS_Store
+*.pyc
+__pycache__/
+
+# Secrets (if any)
+*.env
