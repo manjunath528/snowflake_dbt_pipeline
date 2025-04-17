@@ -1,0 +1,66 @@
+version: 2
+
+models:
+  - name: stg_user_account_details
+    description: "Staging model for user account details"
+    columns:
+      - name: LOGIN_ID
+        tests:
+          - not_null
+          - unique
+      - name: EMAIL
+        tests:
+          - not_null
+          - unique
+      - name: ID
+        tests:
+          - unique
+          - not_null
+      - name: PERSONAL_DETAILS_STATUS
+        tests:
+          - accepted_values:
+              values: ['Registered', 'Active']
+      - name: HEALTH_DETAILS_STATUS
+        tests:
+          - accepted_values:
+              values: ['Uploaded','Not Uploaded']
+
+  - name: stg_user_personal_details
+    description: "Staging model for user personal details"
+    columns:
+      - name: LOGIN_ID
+        tests:
+          - not_null
+          - unique
+      - name: ID
+        tests:
+          - unique
+          - not_null
+
+  - name: stg_user_health_details
+    description: "Staging model for user health details"
+    columns:
+      - name: LOGIN_ID
+        tests:
+          - not_null
+          - unique
+      - name: ID
+        tests:
+          - unique
+          - not_null
+      - name: GENDER
+        tests:
+          - accepted_values:
+              values: ['Male', 'Female']
+
+  - name: stg_message_center
+    description: "Staging model for user messages"
+    columns:
+      - name: ID
+        tests:
+          - unique
+          - not_null
+      - name: IS_READ
+        tests:
+          - accepted_values:
+              values: ['Yes', 'No']

@@ -1539,3 +1539,2531 @@ create or replace transient table dbt_transformed_db.dbt_schema.fct_messages
 [0m19:40:33.620140 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12277d520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107b2c0e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1226bfe90>]}
 [0m19:40:33.620428 [debug] [MainThread]: Flushing usage events
 [0m19:40:34.221569 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:41:41.538737 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10435bc20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10440cc20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10440de50>]}
+
+
+============================== 11:41:41.540544 | 787303c9-db0a-4af6-89ad-2d621b5775a8 ==============================
+[0m11:41:41.540544 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:41:41.540917 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/Users/manjunathreddy/.dbt', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'partial_parse': 'True', 'printer_width': '80', 'introspect': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'no_print': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'quiet': 'False', 'log_format': 'default', 'invocation_command': 'dbt test', 'warn_error': 'None', 'log_path': '/Users/manjunathreddy/snowflake_pipeline/snowflake_project/logs', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'cache_selected_only': 'False', 'empty': 'None', 'log_cache_events': 'False', 'debug': 'False', 'fail_fast': 'False', 'static_parser': 'True'}
+[0m11:41:45.030316 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '787303c9-db0a-4af6-89ad-2d621b5775a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x113f2c3e0>]}
+[0m11:41:45.056119 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '787303c9-db0a-4af6-89ad-2d621b5775a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x11784cad0>]}
+[0m11:41:45.056772 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m11:41:45.133962 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m11:41:45.209638 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 0 files changed.
+[0m11:41:45.210034 [debug] [MainThread]: Partial parsing: added file: snowflake_project://models/staging/schema.yaml
+[0m11:41:45.364423 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '787303c9-db0a-4af6-89ad-2d621b5775a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126f49160>]}
+[0m11:41:45.447266 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/manifest.json
+[0m11:41:45.448798 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/semantic_manifest.json
+[0m11:41:45.468460 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '787303c9-db0a-4af6-89ad-2d621b5775a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126d629c0>]}
+[0m11:41:45.468783 [info ] [MainThread]: Found 8 models, 21 data tests, 4 sources, 474 macros
+[0m11:41:45.468976 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '787303c9-db0a-4af6-89ad-2d621b5775a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126fffbc0>]}
+[0m11:41:45.470171 [info ] [MainThread]: 
+[0m11:41:45.470372 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:41:45.470520 [info ] [MainThread]: 
+[0m11:41:45.470781 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:41:45.473105 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_transformed_db_dbt_schema'
+[0m11:41:45.535887 [debug] [ThreadPool]: Using snowflake connection "list_dbt_transformed_db_dbt_schema"
+[0m11:41:45.536158 [debug] [ThreadPool]: On list_dbt_transformed_db_dbt_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "connection_name": "list_dbt_transformed_db_dbt_schema"} */
+show objects in dbt_transformed_db.dbt_schema limit 10000;
+[0m11:41:45.536318 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:41:46.265713 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.729 seconds
+[0m11:41:46.272805 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '787303c9-db0a-4af6-89ad-2d621b5775a8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126d617c0>]}
+[0m11:41:46.278088 [debug] [Thread-1 (]: Began running node test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709
+[0m11:41:46.278725 [debug] [Thread-2 (]: Began running node test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849
+[0m11:41:46.279396 [debug] [Thread-3 (]: Began running node test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7
+[0m11:41:46.280420 [debug] [Thread-4 (]: Began running node test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b
+[0m11:41:46.279958 [info ] [Thread-1 (]: 1 of 21 START test accepted_values_stg_message_center_isRead__Yes__No .......... [RUN]
+[0m11:41:46.281032 [debug] [Thread-5 (]: Began running node test.snowflake_project.not_null_stg_message_center_id.4683f9f444
+[0m11:41:46.281408 [debug] [Thread-6 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78
+[0m11:41:46.281792 [debug] [Thread-7 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5
+[0m11:41:46.282191 [info ] [Thread-2 (]: 2 of 21 START test accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded  [RUN]
+[0m11:41:46.282599 [debug] [Thread-8 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6
+[0m11:41:46.282978 [debug] [Thread-9 (]: Began running node test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb
+[0m11:41:46.283398 [debug] [Thread-10 ]: Began running node test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729
+[0m11:41:46.283815 [info ] [Thread-3 (]: 3 of 21 START test accepted_values_stg_user_account_details_personal_details_status__Registered__Active  [RUN]
+[0m11:41:46.284273 [info ] [Thread-4 (]: 4 of 21 START test accepted_values_stg_user_health_details_gender__Male__Female  [RUN]
+[0m11:41:46.284781 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbt_transformed_db_dbt_schema, now test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709)
+[0m11:41:46.285275 [info ] [Thread-5 (]: 5 of 21 START test not_null_stg_message_center_id .............................. [RUN]
+[0m11:41:46.285858 [info ] [Thread-6 (]: 6 of 21 START test not_null_stg_user_account_details_emailId ................... [RUN]
+[0m11:41:46.286592 [info ] [Thread-7 (]: 7 of 21 START test not_null_stg_user_account_details_id ........................ [RUN]
+[0m11:41:46.287371 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849'
+[0m11:41:46.287908 [info ] [Thread-8 (]: 8 of 21 START test not_null_stg_user_account_details_loginId ................... [RUN]
+[0m11:41:46.288511 [info ] [Thread-9 (]: 9 of 21 START test not_null_stg_user_health_details_id ......................... [RUN]
+[0m11:41:46.289026 [info ] [Thread-10 ]: 10 of 21 START test not_null_stg_user_health_details_loginId ................... [RUN]
+[0m11:41:46.289684 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7'
+[0m11:41:46.290206 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b'
+[0m11:41:46.290625 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709
+[0m11:41:46.291610 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_message_center_id.4683f9f444'
+[0m11:41:46.292291 [debug] [Thread-6 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78'
+[0m11:41:46.292834 [debug] [Thread-7 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5'
+[0m11:41:46.293218 [debug] [Thread-2 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849
+[0m11:41:46.293650 [debug] [Thread-8 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6'
+[0m11:41:46.294070 [debug] [Thread-9 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb'
+[0m11:41:46.294473 [debug] [Thread-10 ]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729'
+[0m11:41:46.294814 [debug] [Thread-3 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7
+[0m11:41:46.295143 [debug] [Thread-4 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b
+[0m11:41:46.304060 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709"
+[0m11:41:46.304452 [debug] [Thread-5 (]: Began compiling node test.snowflake_project.not_null_stg_message_center_id.4683f9f444
+[0m11:41:46.304787 [debug] [Thread-6 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78
+[0m11:41:46.305083 [debug] [Thread-7 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5
+[0m11:41:46.309623 [debug] [Thread-2 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849"
+[0m11:41:46.310107 [debug] [Thread-8 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6
+[0m11:41:46.310415 [debug] [Thread-9 (]: Began compiling node test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb
+[0m11:41:46.310699 [debug] [Thread-10 ]: Began compiling node test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729
+[0m11:41:46.313972 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7"
+[0m11:41:46.316814 [debug] [Thread-4 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b"
+[0m11:41:46.324540 [debug] [Thread-5 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_message_center_id.4683f9f444"
+[0m11:41:46.327342 [debug] [Thread-6 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78"
+[0m11:41:46.329853 [debug] [Thread-7 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5"
+[0m11:41:46.330156 [debug] [Thread-1 (]: Began executing node test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709
+[0m11:41:46.332592 [debug] [Thread-8 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6"
+[0m11:41:46.334963 [debug] [Thread-9 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb"
+[0m11:41:46.337199 [debug] [Thread-10 ]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729"
+[0m11:41:46.337471 [debug] [Thread-2 (]: Began executing node test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849
+[0m11:41:46.337975 [debug] [Thread-3 (]: Began executing node test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7
+[0m11:41:46.338219 [debug] [Thread-4 (]: Began executing node test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b
+[0m11:41:46.338424 [debug] [Thread-5 (]: Began executing node test.snowflake_project.not_null_stg_message_center_id.4683f9f444
+[0m11:41:46.338677 [debug] [Thread-6 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78
+[0m11:41:46.349899 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709"
+[0m11:41:46.350216 [debug] [Thread-7 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5
+[0m11:41:46.351645 [debug] [Thread-2 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849"
+[0m11:41:46.351872 [debug] [Thread-8 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6
+[0m11:41:46.352059 [debug] [Thread-9 (]: Began executing node test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb
+[0m11:41:46.353317 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7"
+[0m11:41:46.354521 [debug] [Thread-4 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b"
+[0m11:41:46.354726 [debug] [Thread-10 ]: Began executing node test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729
+[0m11:41:46.356624 [debug] [Thread-5 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_message_center_id.4683f9f444"
+[0m11:41:46.357697 [debug] [Thread-6 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78"
+[0m11:41:46.358777 [debug] [Thread-7 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5"
+[0m11:41:46.359943 [debug] [Thread-8 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6"
+[0m11:41:46.361018 [debug] [Thread-9 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb"
+[0m11:41:46.361632 [debug] [Thread-2 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849"
+[0m11:41:46.362076 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709"
+[0m11:41:46.363226 [debug] [Thread-10 ]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729"
+[0m11:41:46.363693 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7"
+[0m11:41:46.364182 [debug] [Thread-4 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b"
+[0m11:41:46.364623 [debug] [Thread-5 (]: Using snowflake connection "test.snowflake_project.not_null_stg_message_center_id.4683f9f444"
+[0m11:41:46.365063 [debug] [Thread-6 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78"
+[0m11:41:46.365439 [debug] [Thread-7 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5"
+[0m11:41:46.365766 [debug] [Thread-8 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6"
+[0m11:41:46.365990 [debug] [Thread-2 (]: On test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        health_details_status as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_account_details
+    group by health_details_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Uploaded','Not Uploaded'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.366337 [debug] [Thread-9 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb"
+[0m11:41:46.366522 [debug] [Thread-1 (]: On test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        isRead as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_message_center
+    group by isRead
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Yes','No'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.366779 [debug] [Thread-3 (]: On test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        personal_details_status as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_account_details
+    group by personal_details_status
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Registered','Active'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.367006 [debug] [Thread-4 (]: On test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        gender as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_health_details
+    group by gender
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Male','Female'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.367345 [debug] [Thread-10 ]: Using snowflake connection "test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729"
+[0m11:41:46.367516 [debug] [Thread-5 (]: On test.snowflake_project.not_null_stg_message_center_id.4683f9f444: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_message_center_id.4683f9f444"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from dbt_transformed_db.dbt_schema.stg_message_center
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.367714 [debug] [Thread-6 (]: On test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select emailId
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where emailId is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.367901 [debug] [Thread-7 (]: On test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.368089 [debug] [Thread-8 (]: On test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loginId
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where loginId is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.368274 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:41:46.368454 [debug] [Thread-9 (]: On test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.368864 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:41:46.369225 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:41:46.369471 [debug] [Thread-10 ]: On test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loginId
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where loginId is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.369767 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m11:41:46.370043 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m11:41:46.370298 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m11:41:46.370483 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m11:41:46.370788 [debug] [Thread-9 (]: Opening a new connection, currently in state init
+[0m11:41:46.373792 [debug] [Thread-10 ]: Opening a new connection, currently in state init
+[0m11:41:46.591479 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5e98-0003-5d620003a006
+[0m11:41:46.591837 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 13 at position 8
+invalid identifier 'ISREAD'
+[0m11:41:46.594133 [debug] [Thread-1 (]: Database Error in test accepted_values_stg_message_center_isRead__Yes__No (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 13 at position 8
+  invalid identifier 'ISREAD'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/accepted_values_stg_message_center_isRead__Yes__No.sql
+[0m11:41:46.594433 [error] [Thread-1 (]: 1 of 21 ERROR accepted_values_stg_message_center_isRead__Yes__No ............... [[31mERROR[0m in 0.31s]
+[0m11:41:46.594748 [debug] [Thread-1 (]: Finished running node test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709
+[0m11:41:46.594963 [debug] [Thread-1 (]: Began running node test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f
+[0m11:41:46.595239 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709' to be skipped because of status 'error'.  Reason: Database Error in test accepted_values_stg_message_center_isRead__Yes__No (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 13 at position 8
+  invalid identifier 'ISREAD'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/accepted_values_stg_message_center_isRead__Yes__No.sql.
+[0m11:41:46.595456 [info ] [Thread-1 (]: 11 of 21 START test not_null_stg_user_personal_details_countryId ............... [RUN]
+[0m11:41:46.595783 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_message_center_isRead__Yes__No.166a51a709, now test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f)
+[0m11:41:46.595985 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f
+[0m11:41:46.598168 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f"
+[0m11:41:46.598555 [debug] [Thread-1 (]: Began executing node test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f
+[0m11:41:46.599678 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f"
+[0m11:41:46.600169 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f"
+[0m11:41:46.600364 [debug] [Thread-1 (]: On test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select countryId
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where countryId is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.803598 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5e55-0003-5d6200039a6a
+[0m11:41:46.804216 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 12 at position 7
+invalid identifier 'COUNTRYID'
+[0m11:41:46.808017 [debug] [Thread-1 (]: Database Error in test not_null_stg_user_personal_details_countryId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'COUNTRYID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_personal_details_countryId.sql
+[0m11:41:46.808634 [error] [Thread-1 (]: 11 of 21 ERROR not_null_stg_user_personal_details_countryId .................... [[31mERROR[0m in 0.21s]
+[0m11:41:46.809231 [debug] [Thread-1 (]: Finished running node test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f
+[0m11:41:46.809649 [debug] [Thread-1 (]: Began running node test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4
+[0m11:41:46.810166 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f' to be skipped because of status 'error'.  Reason: Database Error in test not_null_stg_user_personal_details_countryId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'COUNTRYID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_personal_details_countryId.sql.
+[0m11:41:46.810618 [info ] [Thread-1 (]: 12 of 21 START test not_null_stg_user_personal_details_id ...................... [RUN]
+[0m11:41:46.811171 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_personal_details_countryId.db6821db4f, now test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4)
+[0m11:41:46.811510 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4
+[0m11:41:46.815515 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4"
+[0m11:41:46.816279 [debug] [Thread-1 (]: Began executing node test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4
+[0m11:41:46.818487 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4"
+[0m11:41:46.819653 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4"
+[0m11:41:46.820088 [debug] [Thread-1 (]: On test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select id
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where id is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.861443 [debug] [Thread-8 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5e55-0003-5d6200039a6e
+[0m11:41:46.861926 [debug] [Thread-8 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 12 at position 7
+invalid identifier 'LOGINID'
+[0m11:41:46.865516 [debug] [Thread-8 (]: Database Error in test not_null_stg_user_account_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_loginId.sql
+[0m11:41:46.866046 [error] [Thread-8 (]: 8 of 21 ERROR not_null_stg_user_account_details_loginId ........................ [[31mERROR[0m in 0.57s]
+[0m11:41:46.866604 [debug] [Thread-8 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6
+[0m11:41:46.867006 [debug] [Thread-8 (]: Began running node test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179
+[0m11:41:46.867489 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6' to be skipped because of status 'error'.  Reason: Database Error in test not_null_stg_user_account_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_loginId.sql.
+[0m11:41:46.867916 [info ] [Thread-8 (]: 13 of 21 START test not_null_stg_user_personal_details_loginId ................. [RUN]
+[0m11:41:46.868424 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_account_details_loginId.f063e956a6, now test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179)
+[0m11:41:46.868749 [debug] [Thread-8 (]: Began compiling node test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179
+[0m11:41:46.872413 [debug] [Thread-8 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179"
+[0m11:41:46.873154 [debug] [Thread-8 (]: Began executing node test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179
+[0m11:41:46.875356 [debug] [Thread-8 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179"
+[0m11:41:46.876312 [debug] [Thread-8 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179"
+[0m11:41:46.876678 [debug] [Thread-8 (]: On test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select loginId
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where loginId is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.893261 [debug] [Thread-6 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5dc9-0003-5d6200037276
+[0m11:41:46.893721 [debug] [Thread-6 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 12 at position 7
+invalid identifier 'EMAILID'
+[0m11:41:46.896890 [debug] [Thread-6 (]: Database Error in test not_null_stg_user_account_details_emailId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'EMAILID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_emailId.sql
+[0m11:41:46.897302 [error] [Thread-6 (]: 6 of 21 ERROR not_null_stg_user_account_details_emailId ........................ [[31mERROR[0m in 0.61s]
+[0m11:41:46.897742 [debug] [Thread-6 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78
+[0m11:41:46.898058 [debug] [Thread-6 (]: Began running node test.snowflake_project.unique_stg_message_center_id.59af2aa5ab
+[0m11:41:46.898435 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78' to be skipped because of status 'error'.  Reason: Database Error in test not_null_stg_user_account_details_emailId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'EMAILID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_emailId.sql.
+[0m11:41:46.898776 [info ] [Thread-6 (]: 14 of 21 START test unique_stg_message_center_id ............................... [RUN]
+[0m11:41:46.899212 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_account_details_emailId.83d15a0a78, now test.snowflake_project.unique_stg_message_center_id.59af2aa5ab)
+[0m11:41:46.899488 [debug] [Thread-6 (]: Began compiling node test.snowflake_project.unique_stg_message_center_id.59af2aa5ab
+[0m11:41:46.904325 [debug] [Thread-6 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_message_center_id.59af2aa5ab"
+[0m11:41:46.904880 [debug] [Thread-6 (]: Began executing node test.snowflake_project.unique_stg_message_center_id.59af2aa5ab
+[0m11:41:46.906476 [debug] [Thread-6 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_message_center_id.59af2aa5ab"
+[0m11:41:46.907331 [debug] [Thread-6 (]: Using snowflake connection "test.snowflake_project.unique_stg_message_center_id.59af2aa5ab"
+[0m11:41:46.907616 [debug] [Thread-6 (]: On test.snowflake_project.unique_stg_message_center_id.59af2aa5ab: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_message_center_id.59af2aa5ab"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_message_center
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:46.987312 [debug] [Thread-8 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5d83-0003-5d620002f2d2
+[0m11:41:46.987943 [debug] [Thread-8 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 12 at position 7
+invalid identifier 'LOGINID'
+[0m11:41:46.991675 [debug] [Thread-8 (]: Database Error in test not_null_stg_user_personal_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_personal_details_loginId.sql
+[0m11:41:46.992275 [error] [Thread-8 (]: 13 of 21 ERROR not_null_stg_user_personal_details_loginId ...................... [[31mERROR[0m in 0.12s]
+[0m11:41:46.992881 [debug] [Thread-8 (]: Finished running node test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179
+[0m11:41:46.993296 [debug] [Thread-8 (]: Began running node test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9
+[0m11:41:46.993668 [info ] [Thread-8 (]: 15 of 21 START test unique_stg_user_account_details_emailId .................... [RUN]
+[0m11:41:46.994149 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179' to be skipped because of status 'error'.  Reason: Database Error in test not_null_stg_user_personal_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_personal_details_loginId.sql.
+[0m11:41:46.994617 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_personal_details_loginId.77ee365179, now test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9)
+[0m11:41:46.995106 [debug] [Thread-8 (]: Began compiling node test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9
+[0m11:41:46.999140 [debug] [Thread-8 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9"
+[0m11:41:47.000112 [debug] [Thread-8 (]: Began executing node test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9
+[0m11:41:47.005707 [debug] [Thread-8 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9"
+[0m11:41:47.007727 [debug] [Thread-10 ]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5e42-0003-5d620003b006
+[0m11:41:47.008163 [debug] [Thread-10 ]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 12 at position 7
+invalid identifier 'LOGINID'
+[0m11:41:47.010571 [debug] [Thread-8 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9"
+[0m11:41:47.010951 [debug] [Thread-8 (]: On test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    emailId as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where emailId is not null
+group by emailId
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:47.012311 [debug] [Thread-10 ]: Database Error in test not_null_stg_user_health_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_health_details_loginId.sql
+[0m11:41:47.013004 [error] [Thread-10 ]: 10 of 21 ERROR not_null_stg_user_health_details_loginId ........................ [[31mERROR[0m in 0.72s]
+[0m11:41:47.013685 [debug] [Thread-10 ]: Finished running node test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729
+[0m11:41:47.014054 [debug] [Thread-10 ]: Began running node test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d
+[0m11:41:47.014413 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729' to be skipped because of status 'error'.  Reason: Database Error in test not_null_stg_user_health_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_health_details_loginId.sql.
+[0m11:41:47.014850 [info ] [Thread-10 ]: 16 of 21 START test unique_stg_user_account_details_id ......................... [RUN]
+[0m11:41:47.015513 [debug] [Thread-10 ]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_health_details_loginId.c9906e1729, now test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d)
+[0m11:41:47.015841 [debug] [Thread-10 ]: Began compiling node test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d
+[0m11:41:47.018924 [debug] [Thread-10 ]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d"
+[0m11:41:47.019525 [debug] [Thread-10 ]: Began executing node test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d
+[0m11:41:47.021081 [debug] [Thread-10 ]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d"
+[0m11:41:47.021831 [debug] [Thread-10 ]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d"
+[0m11:41:47.022142 [debug] [Thread-10 ]: On test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:47.096067 [debug] [Thread-8 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5dc9-0003-5d620003727a
+[0m11:41:47.096607 [debug] [Thread-8 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 11 at position 4
+invalid identifier 'EMAILID'
+[0m11:41:47.100254 [debug] [Thread-8 (]: Database Error in test unique_stg_user_account_details_emailId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'EMAILID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_emailId.sql
+[0m11:41:47.100792 [error] [Thread-8 (]: 15 of 21 ERROR unique_stg_user_account_details_emailId ......................... [[31mERROR[0m in 0.11s]
+[0m11:41:47.101372 [debug] [Thread-8 (]: Finished running node test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9
+[0m11:41:47.101791 [debug] [Thread-8 (]: Began running node test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3
+[0m11:41:47.102160 [info ] [Thread-8 (]: 17 of 21 START test unique_stg_user_account_details_loginId .................... [RUN]
+[0m11:41:47.102568 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9, now test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3)
+[0m11:41:47.102881 [debug] [Thread-8 (]: Began compiling node test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3
+[0m11:41:47.103333 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.unique_stg_user_account_details_emailId.24a14745e9' to be skipped because of status 'error'.  Reason: Database Error in test unique_stg_user_account_details_emailId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'EMAILID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_emailId.sql.
+[0m11:41:47.107108 [debug] [Thread-8 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3"
+[0m11:41:47.107963 [debug] [Thread-8 (]: Began executing node test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3
+[0m11:41:47.110230 [debug] [Thread-8 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3"
+[0m11:41:47.111421 [debug] [Thread-8 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3"
+[0m11:41:47.111808 [debug] [Thread-8 (]: On test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    loginId as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where loginId is not null
+group by loginId
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:47.246326 [debug] [Thread-8 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5e42-0003-5d620003b00a
+[0m11:41:47.247686 [debug] [Thread-8 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 11 at position 4
+invalid identifier 'LOGINID'
+[0m11:41:47.254292 [debug] [Thread-8 (]: Database Error in test unique_stg_user_account_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_loginId.sql
+[0m11:41:47.255375 [error] [Thread-8 (]: 17 of 21 ERROR unique_stg_user_account_details_loginId ......................... [[31mERROR[0m in 0.15s]
+[0m11:41:47.256376 [debug] [Thread-8 (]: Finished running node test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3
+[0m11:41:47.257017 [debug] [Thread-8 (]: Began running node test.snowflake_project.unique_stg_user_health_details_id.387afbac1f
+[0m11:41:47.257673 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3' to be skipped because of status 'error'.  Reason: Database Error in test unique_stg_user_account_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_loginId.sql.
+[0m11:41:47.258218 [info ] [Thread-8 (]: 18 of 21 START test unique_stg_user_health_details_id .......................... [RUN]
+[0m11:41:47.259042 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.snowflake_project.unique_stg_user_account_details_loginId.aa49636be3, now test.snowflake_project.unique_stg_user_health_details_id.387afbac1f)
+[0m11:41:47.259588 [debug] [Thread-8 (]: Began compiling node test.snowflake_project.unique_stg_user_health_details_id.387afbac1f
+[0m11:41:47.265068 [debug] [Thread-8 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_health_details_id.387afbac1f"
+[0m11:41:47.266309 [debug] [Thread-8 (]: Began executing node test.snowflake_project.unique_stg_user_health_details_id.387afbac1f
+[0m11:41:47.269364 [debug] [Thread-8 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_health_details_id.387afbac1f"
+[0m11:41:47.270846 [debug] [Thread-8 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_health_details_id.387afbac1f"
+[0m11:41:47.271360 [debug] [Thread-8 (]: On test.snowflake_project.unique_stg_user_health_details_id.387afbac1f: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_health_details_id.387afbac1f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:47.280063 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 0.909 seconds
+[0m11:41:47.280953 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.912 seconds
+[0m11:41:47.290360 [info ] [Thread-9 (]: 9 of 21 PASS not_null_stg_user_health_details_id ............................... [[32mPASS[0m in 1.00s]
+[0m11:41:47.292328 [info ] [Thread-3 (]: 3 of 21 PASS accepted_values_stg_user_account_details_personal_details_status__Registered__Active  [[32mPASS[0m in 1.00s]
+[0m11:41:47.292906 [debug] [Thread-9 (]: Finished running node test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb
+[0m11:41:47.293360 [debug] [Thread-3 (]: Finished running node test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7
+[0m11:41:47.293723 [debug] [Thread-9 (]: Began running node test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7
+[0m11:41:47.294147 [debug] [Thread-3 (]: Began running node test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad
+[0m11:41:47.294558 [info ] [Thread-9 (]: 19 of 21 START test unique_stg_user_health_details_loginId ..................... [RUN]
+[0m11:41:47.294937 [info ] [Thread-3 (]: 20 of 21 START test unique_stg_user_personal_details_id ........................ [RUN]
+[0m11:41:47.295348 [debug] [Thread-9 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_health_details_id.ba8c2ddbdb, now test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7)
+[0m11:41:47.295687 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_user_account_details_personal_details_status__Registered__Active.593acd8fc7, now test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad)
+[0m11:41:47.296002 [debug] [Thread-9 (]: Began compiling node test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7
+[0m11:41:47.296294 [debug] [Thread-3 (]: Began compiling node test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad
+[0m11:41:47.300369 [debug] [Thread-9 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7"
+[0m11:41:47.305644 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad"
+[0m11:41:47.306752 [debug] [Thread-7 (]: SQL status: SUCCESS 1 in 0.936 seconds
+[0m11:41:47.308562 [info ] [Thread-7 (]: 7 of 21 PASS not_null_stg_user_account_details_id .............................. [[32mPASS[0m in 1.02s]
+[0m11:41:47.309092 [debug] [Thread-7 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5
+[0m11:41:47.309484 [debug] [Thread-7 (]: Began running node test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8
+[0m11:41:47.309830 [info ] [Thread-7 (]: 21 of 21 START test unique_stg_user_personal_details_loginId ................... [RUN]
+[0m11:41:47.310158 [debug] [Thread-3 (]: Began executing node test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad
+[0m11:41:47.310421 [debug] [Thread-9 (]: Began executing node test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7
+[0m11:41:47.310686 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_account_details_id.ad609c2bb5, now test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8)
+[0m11:41:47.312448 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad"
+[0m11:41:47.315598 [debug] [Thread-9 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7"
+[0m11:41:47.316223 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.947 seconds
+[0m11:41:47.316485 [debug] [Thread-7 (]: Began compiling node test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8
+[0m11:41:47.317978 [info ] [Thread-4 (]: 4 of 21 PASS accepted_values_stg_user_health_details_gender__Male__Female ...... [[32mPASS[0m in 1.03s]
+[0m11:41:47.318607 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad"
+[0m11:41:47.321116 [debug] [Thread-7 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8"
+[0m11:41:47.321613 [debug] [Thread-9 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7"
+[0m11:41:47.321973 [debug] [Thread-4 (]: Finished running node test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b
+[0m11:41:47.322483 [debug] [Thread-3 (]: On test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    id as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where id is not null
+group by id
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:47.322977 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.953 seconds
+[0m11:41:47.323330 [debug] [Thread-9 (]: On test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    loginId as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where loginId is not null
+group by loginId
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:47.323765 [debug] [Thread-7 (]: Began executing node test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8
+[0m11:41:47.325679 [info ] [Thread-5 (]: 5 of 21 PASS not_null_stg_message_center_id .................................... [[32mPASS[0m in 1.03s]
+[0m11:41:47.328094 [debug] [Thread-7 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8"
+[0m11:41:47.328716 [debug] [Thread-5 (]: Finished running node test.snowflake_project.not_null_stg_message_center_id.4683f9f444
+[0m11:41:47.329820 [debug] [Thread-7 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8"
+[0m11:41:47.330076 [debug] [Thread-7 (]: On test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    loginId as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where loginId is not null
+group by loginId
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:41:47.382718 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 0.360 seconds
+[0m11:41:47.384505 [info ] [Thread-10 ]: 16 of 21 PASS unique_stg_user_account_details_id ............................... [[32mPASS[0m in 0.37s]
+[0m11:41:47.384999 [debug] [Thread-10 ]: Finished running node test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d
+[0m11:41:47.385553 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 1.017 seconds
+[0m11:41:47.386952 [info ] [Thread-2 (]: 2 of 21 PASS accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded  [[32mPASS[0m in 1.10s]
+[0m11:41:47.387365 [debug] [Thread-2 (]: Finished running node test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849
+[0m11:41:47.413869 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.506 seconds
+[0m11:41:47.415595 [info ] [Thread-6 (]: 14 of 21 PASS unique_stg_message_center_id ..................................... [[32mPASS[0m in 0.52s]
+[0m11:41:47.416075 [debug] [Thread-6 (]: Finished running node test.snowflake_project.unique_stg_message_center_id.59af2aa5ab
+[0m11:41:47.417186 [debug] [Thread-9 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5e98-0003-5d620003a016
+[0m11:41:47.417516 [debug] [Thread-9 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 11 at position 4
+invalid identifier 'LOGINID'
+[0m11:41:47.420640 [debug] [Thread-9 (]: Database Error in test unique_stg_user_health_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_health_details_loginId.sql
+[0m11:41:47.421004 [error] [Thread-9 (]: 19 of 21 ERROR unique_stg_user_health_details_loginId .......................... [[31mERROR[0m in 0.13s]
+[0m11:41:47.421457 [debug] [Thread-9 (]: Finished running node test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7
+[0m11:41:47.421804 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7' to be skipped because of status 'error'.  Reason: Database Error in test unique_stg_user_health_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_health_details_loginId.sql.
+[0m11:41:47.422271 [debug] [Thread-7 (]: Snowflake adapter: Snowflake query id: 01bbbf25-0304-5d28-0003-5d62000382de
+[0m11:41:47.422526 [debug] [Thread-7 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 11 at position 4
+invalid identifier 'LOGINID'
+[0m11:41:47.425288 [debug] [Thread-7 (]: Database Error in test unique_stg_user_personal_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_personal_details_loginId.sql
+[0m11:41:47.425683 [error] [Thread-7 (]: 21 of 21 ERROR unique_stg_user_personal_details_loginId ........................ [[31mERROR[0m in 0.11s]
+[0m11:41:47.426061 [debug] [Thread-7 (]: Finished running node test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8
+[0m11:41:47.426397 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8' to be skipped because of status 'error'.  Reason: Database Error in test unique_stg_user_personal_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_personal_details_loginId.sql.
+[0m11:41:47.480693 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.660 seconds
+[0m11:41:47.482663 [info ] [Thread-1 (]: 12 of 21 PASS not_null_stg_user_personal_details_id ............................ [[32mPASS[0m in 0.67s]
+[0m11:41:47.483212 [debug] [Thread-1 (]: Finished running node test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4
+[0m11:41:47.531241 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 0.259 seconds
+[0m11:41:47.533501 [info ] [Thread-8 (]: 18 of 21 PASS unique_stg_user_health_details_id ................................ [[32mPASS[0m in 0.27s]
+[0m11:41:47.534481 [debug] [Thread-8 (]: Finished running node test.snowflake_project.unique_stg_user_health_details_id.387afbac1f
+[0m11:41:47.535247 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.211 seconds
+[0m11:41:47.537380 [info ] [Thread-3 (]: 20 of 21 PASS unique_stg_user_personal_details_id .............................. [[32mPASS[0m in 0.24s]
+[0m11:41:47.537989 [debug] [Thread-3 (]: Finished running node test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad
+[0m11:41:47.539590 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:41:47.540004 [debug] [MainThread]: Connection 'test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4' was left open.
+[0m11:41:47.540351 [debug] [MainThread]: On test.snowflake_project.not_null_stg_user_personal_details_id.860191f7a4: Close
+[0m11:41:47.619446 [debug] [MainThread]: Connection 'test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849' was left open.
+[0m11:41:47.620146 [debug] [MainThread]: On test.snowflake_project.accepted_values_stg_user_account_details_health_details_status__Uploaded__Not_Uploaded.a3d5ee9849: Close
+[0m11:41:47.716415 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad' was left open.
+[0m11:41:47.717350 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_personal_details_id.97660ec9ad: Close
+[0m11:41:47.792846 [debug] [MainThread]: Connection 'test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b' was left open.
+[0m11:41:47.793724 [debug] [MainThread]: On test.snowflake_project.accepted_values_stg_user_health_details_gender__Male__Female.951df3af7b: Close
+[0m11:41:47.890391 [debug] [MainThread]: Connection 'test.snowflake_project.not_null_stg_message_center_id.4683f9f444' was left open.
+[0m11:41:47.891274 [debug] [MainThread]: On test.snowflake_project.not_null_stg_message_center_id.4683f9f444: Close
+[0m11:41:47.977806 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_message_center_id.59af2aa5ab' was left open.
+[0m11:41:47.978719 [debug] [MainThread]: On test.snowflake_project.unique_stg_message_center_id.59af2aa5ab: Close
+[0m11:41:48.063947 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8' was left open.
+[0m11:41:48.064861 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_personal_details_loginId.23166bc7e8: Close
+[0m11:41:48.154849 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_health_details_id.387afbac1f' was left open.
+[0m11:41:48.155558 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_health_details_id.387afbac1f: Close
+[0m11:41:48.239886 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7' was left open.
+[0m11:41:48.240479 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_health_details_loginId.d215c4fab7: Close
+[0m11:41:48.331737 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d' was left open.
+[0m11:41:48.332236 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_account_details_id.e1b7b3c78d: Close
+[0m11:41:48.400079 [info ] [MainThread]: 
+[0m11:41:48.400515 [info ] [MainThread]: Finished running 21 data tests in 0 hours 0 minutes and 2.93 seconds (2.93s).
+[0m11:41:48.402938 [debug] [MainThread]: Command end result
+[0m11:41:48.423976 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/manifest.json
+[0m11:41:48.425047 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/semantic_manifest.json
+[0m11:41:48.429834 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/run_results.json
+[0m11:41:48.430074 [info ] [MainThread]: 
+[0m11:41:48.430316 [info ] [MainThread]: [31mCompleted with 10 errors, 0 partial successes, and 0 warnings:[0m
+[0m11:41:48.430508 [info ] [MainThread]: 
+[0m11:41:48.430755 [error] [MainThread]:   Database Error in test accepted_values_stg_message_center_isRead__Yes__No (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 13 at position 8
+  invalid identifier 'ISREAD'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/accepted_values_stg_message_center_isRead__Yes__No.sql
+[0m11:41:48.430953 [info ] [MainThread]: 
+[0m11:41:48.431157 [error] [MainThread]:   Database Error in test not_null_stg_user_personal_details_countryId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'COUNTRYID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_personal_details_countryId.sql
+[0m11:41:48.431332 [info ] [MainThread]: 
+[0m11:41:48.431521 [error] [MainThread]:   Database Error in test not_null_stg_user_account_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_loginId.sql
+[0m11:41:48.431694 [info ] [MainThread]: 
+[0m11:41:48.431875 [error] [MainThread]:   Database Error in test not_null_stg_user_account_details_emailId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'EMAILID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_emailId.sql
+[0m11:41:48.432025 [info ] [MainThread]: 
+[0m11:41:48.432199 [error] [MainThread]:   Database Error in test not_null_stg_user_personal_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_personal_details_loginId.sql
+[0m11:41:48.432345 [info ] [MainThread]: 
+[0m11:41:48.432519 [error] [MainThread]:   Database Error in test not_null_stg_user_health_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_health_details_loginId.sql
+[0m11:41:48.432666 [info ] [MainThread]: 
+[0m11:41:48.432835 [error] [MainThread]:   Database Error in test unique_stg_user_account_details_emailId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'EMAILID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_emailId.sql
+[0m11:41:48.432985 [info ] [MainThread]: 
+[0m11:41:48.433155 [error] [MainThread]:   Database Error in test unique_stg_user_account_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_loginId.sql
+[0m11:41:48.433301 [info ] [MainThread]: 
+[0m11:41:48.433472 [error] [MainThread]:   Database Error in test unique_stg_user_health_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_health_details_loginId.sql
+[0m11:41:48.433620 [info ] [MainThread]: 
+[0m11:41:48.433788 [error] [MainThread]:   Database Error in test unique_stg_user_personal_details_loginId (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'LOGINID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_personal_details_loginId.sql
+[0m11:41:48.433945 [info ] [MainThread]: 
+[0m11:41:48.434120 [info ] [MainThread]: Done. PASS=11 WARN=0 ERROR=10 SKIP=0 TOTAL=21
+[0m11:41:48.450219 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 6.9502316, "process_in_blocks": "0", "process_kernel_time": 1.437436, "process_mem_max_rss": "209158144", "process_out_blocks": "0", "process_user_time": 4.052926}
+[0m11:41:48.450842 [debug] [MainThread]: Command `dbt test` failed at 11:41:48.450750 after 6.95 seconds
+[0m11:41:48.451131 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x126e9e390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127e358e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x106293bf0>]}
+[0m11:41:48.451384 [debug] [MainThread]: Flushing usage events
+[0m11:41:48.936743 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:47:24.672941 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1067fe630>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072bfec0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072bfcb0>]}
+
+
+============================== 11:47:24.674839 | 85d1f7ff-d339-4bbd-b984-6d7344a31cb7 ==============================
+[0m11:47:24.674839 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:47:24.675245 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'no_print': 'None', 'static_parser': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'quiet': 'False', 'fail_fast': 'False', 'introspect': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_format': 'default', 'version_check': 'True', 'log_path': '/Users/manjunathreddy/snowflake_pipeline/snowflake_project/logs', 'profiles_dir': '/Users/manjunathreddy/.dbt', 'debug': 'False', 'empty': 'None', 'target_path': 'None', 'invocation_command': 'dbt test', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False'}
+[0m11:47:25.540212 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '85d1f7ff-d339-4bbd-b984-6d7344a31cb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1072f4980>]}
+[0m11:47:25.566516 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '85d1f7ff-d339-4bbd-b984-6d7344a31cb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x105163e60>]}
+[0m11:47:25.567183 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m11:47:25.634966 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m11:47:25.721285 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m11:47:25.721957 [debug] [MainThread]: Partial parsing: updated file: snowflake_project://models/staging/schema.yaml
+[0m11:47:25.987253 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '85d1f7ff-d339-4bbd-b984-6d7344a31cb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d272570>]}
+[0m11:47:26.027172 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/manifest.json
+[0m11:47:26.028435 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/semantic_manifest.json
+[0m11:47:26.048442 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '85d1f7ff-d339-4bbd-b984-6d7344a31cb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x12c7febd0>]}
+[0m11:47:26.048764 [info ] [MainThread]: Found 8 models, 21 data tests, 4 sources, 474 macros
+[0m11:47:26.048962 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '85d1f7ff-d339-4bbd-b984-6d7344a31cb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13c33f350>]}
+[0m11:47:26.050167 [info ] [MainThread]: 
+[0m11:47:26.050372 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:47:26.050520 [info ] [MainThread]: 
+[0m11:47:26.050783 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:47:26.053058 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_transformed_db_dbt_schema'
+[0m11:47:26.111127 [debug] [ThreadPool]: Using snowflake connection "list_dbt_transformed_db_dbt_schema"
+[0m11:47:26.111396 [debug] [ThreadPool]: On list_dbt_transformed_db_dbt_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "connection_name": "list_dbt_transformed_db_dbt_schema"} */
+show objects in dbt_transformed_db.dbt_schema limit 10000;
+[0m11:47:26.111560 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:47:26.586600 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.475 seconds
+[0m11:47:26.590683 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '85d1f7ff-d339-4bbd-b984-6d7344a31cb7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13c0be510>]}
+[0m11:47:26.594531 [debug] [Thread-1 (]: Began running node test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205
+[0m11:47:26.594954 [debug] [Thread-2 (]: Began running node test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c
+[0m11:47:26.595392 [debug] [Thread-3 (]: Began running node test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130
+[0m11:47:26.595747 [debug] [Thread-4 (]: Began running node test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0
+[0m11:47:26.596414 [debug] [Thread-5 (]: Began running node test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4
+[0m11:47:26.596141 [info ] [Thread-1 (]: 1 of 21 START test accepted_values_stg_message_center_IS_READ__Yes__No ......... [RUN]
+[0m11:47:26.596816 [debug] [Thread-6 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4
+[0m11:47:26.597133 [debug] [Thread-7 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f
+[0m11:47:26.597454 [debug] [Thread-8 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28
+[0m11:47:26.597772 [debug] [Thread-9 (]: Began running node test.snowflake_project.not_null_stg_user_health_details_ID.4559192351
+[0m11:47:26.598344 [debug] [Thread-10 ]: Began running node test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352
+[0m11:47:26.598100 [info ] [Thread-2 (]: 2 of 21 START test accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded  [RUN]
+[0m11:47:26.598738 [info ] [Thread-3 (]: 3 of 21 START test accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active  [RUN]
+[0m11:47:26.599075 [info ] [Thread-4 (]: 4 of 21 START test accepted_values_stg_user_health_details_GENDER__Male__Female  [RUN]
+[0m11:47:26.599470 [info ] [Thread-5 (]: 5 of 21 START test not_null_stg_message_center_ID .............................. [RUN]
+[0m11:47:26.599921 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbt_transformed_db_dbt_schema, now test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205)
+[0m11:47:26.600270 [info ] [Thread-6 (]: 6 of 21 START test not_null_stg_user_account_details_EMAIL_ID .................. [RUN]
+[0m11:47:26.600617 [info ] [Thread-7 (]: 7 of 21 START test not_null_stg_user_account_details_ID ........................ [RUN]
+[0m11:47:26.600937 [info ] [Thread-8 (]: 8 of 21 START test not_null_stg_user_account_details_LOGIN_ID .................. [RUN]
+[0m11:47:26.601254 [info ] [Thread-9 (]: 9 of 21 START test not_null_stg_user_health_details_ID ......................... [RUN]
+[0m11:47:26.601614 [info ] [Thread-10 ]: 10 of 21 START test not_null_stg_user_health_details_LOGIN_ID .................. [RUN]
+[0m11:47:26.602153 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c'
+[0m11:47:26.602602 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130'
+[0m11:47:26.603024 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0'
+[0m11:47:26.603420 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4'
+[0m11:47:26.603866 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205
+[0m11:47:26.604454 [debug] [Thread-6 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4'
+[0m11:47:26.604829 [debug] [Thread-7 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f'
+[0m11:47:26.605176 [debug] [Thread-8 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28'
+[0m11:47:26.605589 [debug] [Thread-9 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_health_details_ID.4559192351'
+[0m11:47:26.606082 [debug] [Thread-10 ]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352'
+[0m11:47:26.606471 [debug] [Thread-2 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c
+[0m11:47:26.606795 [debug] [Thread-3 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130
+[0m11:47:26.607112 [debug] [Thread-4 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0
+[0m11:47:26.607408 [debug] [Thread-5 (]: Began compiling node test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4
+[0m11:47:26.614370 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205"
+[0m11:47:26.614693 [debug] [Thread-6 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4
+[0m11:47:26.614960 [debug] [Thread-7 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f
+[0m11:47:26.615227 [debug] [Thread-8 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28
+[0m11:47:26.615476 [debug] [Thread-9 (]: Began compiling node test.snowflake_project.not_null_stg_user_health_details_ID.4559192351
+[0m11:47:26.615736 [debug] [Thread-10 ]: Began compiling node test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352
+[0m11:47:26.619536 [debug] [Thread-2 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c"
+[0m11:47:26.622754 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130"
+[0m11:47:26.625440 [debug] [Thread-4 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0"
+[0m11:47:26.630520 [debug] [Thread-5 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4"
+[0m11:47:26.633125 [debug] [Thread-6 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4"
+[0m11:47:26.635505 [debug] [Thread-7 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f"
+[0m11:47:26.637776 [debug] [Thread-8 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28"
+[0m11:47:26.638036 [debug] [Thread-1 (]: Began executing node test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205
+[0m11:47:26.640166 [debug] [Thread-9 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_health_details_ID.4559192351"
+[0m11:47:26.642226 [debug] [Thread-10 ]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352"
+[0m11:47:26.642835 [debug] [Thread-2 (]: Began executing node test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c
+[0m11:47:26.643052 [debug] [Thread-3 (]: Began executing node test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130
+[0m11:47:26.643330 [debug] [Thread-4 (]: Began executing node test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0
+[0m11:47:26.643624 [debug] [Thread-5 (]: Began executing node test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4
+[0m11:47:26.643859 [debug] [Thread-6 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4
+[0m11:47:26.654349 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205"
+[0m11:47:26.654596 [debug] [Thread-7 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f
+[0m11:47:26.654814 [debug] [Thread-8 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28
+[0m11:47:26.656014 [debug] [Thread-2 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c"
+[0m11:47:26.656186 [debug] [Thread-9 (]: Began executing node test.snowflake_project.not_null_stg_user_health_details_ID.4559192351
+[0m11:47:26.658187 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130"
+[0m11:47:26.659265 [debug] [Thread-4 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0"
+[0m11:47:26.659457 [debug] [Thread-10 ]: Began executing node test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352
+[0m11:47:26.660481 [debug] [Thread-5 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4"
+[0m11:47:26.661510 [debug] [Thread-6 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4"
+[0m11:47:26.662673 [debug] [Thread-7 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f"
+[0m11:47:26.663756 [debug] [Thread-8 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28"
+[0m11:47:26.664261 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205"
+[0m11:47:26.665353 [debug] [Thread-9 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_health_details_ID.4559192351"
+[0m11:47:26.666023 [debug] [Thread-2 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c"
+[0m11:47:26.667161 [debug] [Thread-10 ]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352"
+[0m11:47:26.667622 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130"
+[0m11:47:26.668050 [debug] [Thread-4 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0"
+[0m11:47:26.668685 [debug] [Thread-7 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f"
+[0m11:47:26.669004 [debug] [Thread-5 (]: Using snowflake connection "test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4"
+[0m11:47:26.669319 [debug] [Thread-6 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4"
+[0m11:47:26.669523 [debug] [Thread-1 (]: On test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        IS_READ as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_message_center
+    group by IS_READ
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Yes','No'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.669966 [debug] [Thread-8 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28"
+[0m11:47:26.670176 [debug] [Thread-2 (]: On test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        HEALTH_DETAILS_STATUS as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_account_details
+    group by HEALTH_DETAILS_STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Uploaded','Not Uploaded'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.670563 [debug] [Thread-9 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_health_details_ID.4559192351"
+[0m11:47:26.670751 [debug] [Thread-3 (]: On test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        PERSONAL_DETAILS_STATUS as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_account_details
+    group by PERSONAL_DETAILS_STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Registered','Active'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.670979 [debug] [Thread-4 (]: On test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        GENDER as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_health_details
+    group by GENDER
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Male','Female'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.671328 [debug] [Thread-10 ]: Using snowflake connection "test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352"
+[0m11:47:26.671502 [debug] [Thread-7 (]: On test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.671694 [debug] [Thread-5 (]: On test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from dbt_transformed_db.dbt_schema.stg_message_center
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.671877 [debug] [Thread-6 (]: On test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select EMAIL_ID
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where EMAIL_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.672288 [debug] [Thread-8 (]: On test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LOGIN_ID
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where LOGIN_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.672647 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:47:26.672889 [debug] [Thread-9 (]: On test.snowflake_project.not_null_stg_user_health_details_ID.4559192351: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_health_details_ID.4559192351"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.673178 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:47:26.673434 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:47:26.673702 [debug] [Thread-10 ]: On test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LOGIN_ID
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where LOGIN_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:26.673910 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m11:47:26.674117 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m11:47:26.674287 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m11:47:26.674453 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m11:47:26.674695 [debug] [Thread-9 (]: Opening a new connection, currently in state init
+[0m11:47:26.677273 [debug] [Thread-10 ]: Opening a new connection, currently in state init
+[0m11:47:27.145325 [debug] [Thread-6 (]: Snowflake adapter: Snowflake query id: 01bbbf2b-0304-5dc9-0003-5d620003727e
+[0m11:47:27.146158 [debug] [Thread-6 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 12 at position 7
+invalid identifier 'EMAIL_ID'
+[0m11:47:27.152515 [debug] [Thread-6 (]: Database Error in test not_null_stg_user_account_details_EMAIL_ID (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'EMAIL_ID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_EMAIL_ID.sql
+[0m11:47:27.153242 [error] [Thread-6 (]: 6 of 21 ERROR not_null_stg_user_account_details_EMAIL_ID ....................... [[31mERROR[0m in 0.55s]
+[0m11:47:27.153975 [debug] [Thread-6 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4
+[0m11:47:27.154482 [debug] [Thread-6 (]: Began running node test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a
+[0m11:47:27.155080 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4' to be skipped because of status 'error'.  Reason: Database Error in test not_null_stg_user_account_details_EMAIL_ID (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'EMAIL_ID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_EMAIL_ID.sql.
+[0m11:47:27.155656 [info ] [Thread-6 (]: 11 of 21 START test not_null_stg_user_personal_details_COUNTRY_ID .............. [RUN]
+[0m11:47:27.156399 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_account_details_EMAIL_ID.f5b9a22cc4, now test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a)
+[0m11:47:27.156845 [debug] [Thread-6 (]: Began compiling node test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a
+[0m11:47:27.161767 [debug] [Thread-6 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a"
+[0m11:47:27.162948 [debug] [Thread-6 (]: Began executing node test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a
+[0m11:47:27.165541 [debug] [Thread-6 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a"
+[0m11:47:27.166679 [debug] [Thread-6 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a"
+[0m11:47:27.167113 [debug] [Thread-6 (]: On test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select COUNTRY_ID
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where COUNTRY_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.198912 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.525 seconds
+[0m11:47:27.208548 [info ] [Thread-4 (]: 4 of 21 PASS accepted_values_stg_user_health_details_GENDER__Male__Female ...... [[32mPASS[0m in 0.61s]
+[0m11:47:27.209268 [debug] [Thread-4 (]: Finished running node test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0
+[0m11:47:27.209738 [debug] [Thread-4 (]: Began running node test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5
+[0m11:47:27.210211 [info ] [Thread-4 (]: 12 of 21 START test not_null_stg_user_personal_details_ID ...................... [RUN]
+[0m11:47:27.210714 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0, now test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5)
+[0m11:47:27.211103 [debug] [Thread-4 (]: Began compiling node test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5
+[0m11:47:27.214912 [debug] [Thread-4 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5"
+[0m11:47:27.216018 [debug] [Thread-4 (]: Began executing node test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5
+[0m11:47:27.218335 [debug] [Thread-4 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5"
+[0m11:47:27.219558 [debug] [Thread-4 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5"
+[0m11:47:27.219973 [debug] [Thread-4 (]: On test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.227686 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.555 seconds
+[0m11:47:27.228336 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 0.551 seconds
+[0m11:47:27.230294 [info ] [Thread-2 (]: 2 of 21 PASS accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded  [[32mPASS[0m in 0.63s]
+[0m11:47:27.231906 [info ] [Thread-10 ]: 10 of 21 PASS not_null_stg_user_health_details_LOGIN_ID ........................ [[32mPASS[0m in 0.63s]
+[0m11:47:27.232400 [debug] [Thread-2 (]: Finished running node test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c
+[0m11:47:27.232812 [debug] [Thread-10 ]: Finished running node test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352
+[0m11:47:27.233141 [debug] [Thread-2 (]: Began running node test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd
+[0m11:47:27.233500 [debug] [Thread-10 ]: Began running node test.snowflake_project.unique_stg_message_center_ID.b430c621ea
+[0m11:47:27.233826 [info ] [Thread-2 (]: 13 of 21 START test not_null_stg_user_personal_details_LOGIN_ID ................ [RUN]
+[0m11:47:27.234164 [info ] [Thread-10 ]: 14 of 21 START test unique_stg_message_center_ID ............................... [RUN]
+[0m11:47:27.234583 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c, now test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd)
+[0m11:47:27.234895 [debug] [Thread-10 ]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352, now test.snowflake_project.unique_stg_message_center_ID.b430c621ea)
+[0m11:47:27.235181 [debug] [Thread-2 (]: Began compiling node test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd
+[0m11:47:27.235442 [debug] [Thread-10 ]: Began compiling node test.snowflake_project.unique_stg_message_center_ID.b430c621ea
+[0m11:47:27.238710 [debug] [Thread-2 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd"
+[0m11:47:27.243446 [debug] [Thread-10 ]: Writing injected SQL for node "test.snowflake_project.unique_stg_message_center_ID.b430c621ea"
+[0m11:47:27.244087 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.572 seconds
+[0m11:47:27.245620 [info ] [Thread-1 (]: 1 of 21 PASS accepted_values_stg_message_center_IS_READ__Yes__No ............... [[32mPASS[0m in 0.65s]
+[0m11:47:27.246118 [debug] [Thread-1 (]: Finished running node test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205
+[0m11:47:27.246425 [debug] [Thread-1 (]: Began running node test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7
+[0m11:47:27.246699 [info ] [Thread-1 (]: 15 of 21 START test unique_stg_user_account_details_EMAIL_ID ................... [RUN]
+[0m11:47:27.246949 [debug] [Thread-10 ]: Began executing node test.snowflake_project.unique_stg_message_center_ID.b430c621ea
+[0m11:47:27.247163 [debug] [Thread-2 (]: Began executing node test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd
+[0m11:47:27.247452 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205, now test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7)
+[0m11:47:27.250071 [debug] [Thread-10 ]: Writing runtime sql for node "test.snowflake_project.unique_stg_message_center_ID.b430c621ea"
+[0m11:47:27.251462 [debug] [Thread-2 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd"
+[0m11:47:27.251747 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7
+[0m11:47:27.254957 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7"
+[0m11:47:27.255659 [debug] [Thread-2 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd"
+[0m11:47:27.256172 [debug] [Thread-10 ]: Using snowflake connection "test.snowflake_project.unique_stg_message_center_ID.b430c621ea"
+[0m11:47:27.256442 [debug] [Thread-2 (]: On test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LOGIN_ID
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where LOGIN_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.256745 [debug] [Thread-10 ]: On test.snowflake_project.unique_stg_message_center_ID.b430c621ea: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_message_center_ID.b430c621ea"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_message_center
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.256988 [debug] [Thread-1 (]: Began executing node test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7
+[0m11:47:27.259072 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7"
+[0m11:47:27.260218 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7"
+[0m11:47:27.260468 [debug] [Thread-1 (]: On test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    EMAIL_ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where EMAIL_ID is not null
+group by EMAIL_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.282161 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.608 seconds
+[0m11:47:27.282711 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 0.608 seconds
+[0m11:47:27.284136 [info ] [Thread-5 (]: 5 of 21 PASS not_null_stg_message_center_ID .................................... [[32mPASS[0m in 0.68s]
+[0m11:47:27.285647 [info ] [Thread-8 (]: 8 of 21 PASS not_null_stg_user_account_details_LOGIN_ID ........................ [[32mPASS[0m in 0.68s]
+[0m11:47:27.286082 [debug] [Thread-5 (]: Finished running node test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4
+[0m11:47:27.286409 [debug] [Thread-8 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28
+[0m11:47:27.286674 [debug] [Thread-5 (]: Began running node test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6
+[0m11:47:27.286974 [debug] [Thread-8 (]: Began running node test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1
+[0m11:47:27.287250 [info ] [Thread-5 (]: 16 of 21 START test unique_stg_user_account_details_ID ......................... [RUN]
+[0m11:47:27.287533 [info ] [Thread-8 (]: 17 of 21 START test unique_stg_user_account_details_LOGIN_ID ................... [RUN]
+[0m11:47:27.287819 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4, now test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6)
+[0m11:47:27.288038 [debug] [Thread-8 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28, now test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1)
+[0m11:47:27.288245 [debug] [Thread-5 (]: Began compiling node test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6
+[0m11:47:27.288441 [debug] [Thread-8 (]: Began compiling node test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1
+[0m11:47:27.291093 [debug] [Thread-5 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6"
+[0m11:47:27.293462 [debug] [Thread-8 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1"
+[0m11:47:27.294121 [debug] [Thread-5 (]: Began executing node test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6
+[0m11:47:27.294362 [debug] [Thread-8 (]: Began executing node test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1
+[0m11:47:27.295705 [debug] [Thread-5 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6"
+[0m11:47:27.296876 [debug] [Thread-8 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1"
+[0m11:47:27.297484 [debug] [Thread-5 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6"
+[0m11:47:27.297721 [debug] [Thread-5 (]: On test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.298163 [debug] [Thread-8 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1"
+[0m11:47:27.298587 [debug] [Thread-8 (]: On test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    LOGIN_ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where LOGIN_ID is not null
+group by LOGIN_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.396183 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.723 seconds
+[0m11:47:27.398456 [info ] [Thread-3 (]: 3 of 21 PASS accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active  [[32mPASS[0m in 0.80s]
+[0m11:47:27.399027 [debug] [Thread-3 (]: Finished running node test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130
+[0m11:47:27.399403 [debug] [Thread-3 (]: Began running node test.snowflake_project.unique_stg_user_health_details_ID.d27c533750
+[0m11:47:27.399798 [info ] [Thread-3 (]: 18 of 21 START test unique_stg_user_health_details_ID .......................... [RUN]
+[0m11:47:27.400255 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130, now test.snowflake_project.unique_stg_user_health_details_ID.d27c533750)
+[0m11:47:27.400601 [debug] [Thread-3 (]: Began compiling node test.snowflake_project.unique_stg_user_health_details_ID.d27c533750
+[0m11:47:27.404235 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_health_details_ID.d27c533750"
+[0m11:47:27.405420 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 0.731 seconds
+[0m11:47:27.407702 [debug] [Thread-3 (]: Began executing node test.snowflake_project.unique_stg_user_health_details_ID.d27c533750
+[0m11:47:27.407360 [info ] [Thread-9 (]: 9 of 21 PASS not_null_stg_user_health_details_ID ............................... [[32mPASS[0m in 0.80s]
+[0m11:47:27.410078 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_health_details_ID.d27c533750"
+[0m11:47:27.410984 [debug] [Thread-9 (]: Finished running node test.snowflake_project.not_null_stg_user_health_details_ID.4559192351
+[0m11:47:27.411754 [debug] [Thread-7 (]: SQL status: SUCCESS 1 in 0.738 seconds
+[0m11:47:27.412158 [debug] [Thread-9 (]: Began running node test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771
+[0m11:47:27.413884 [info ] [Thread-7 (]: 7 of 21 PASS not_null_stg_user_account_details_ID .............................. [[32mPASS[0m in 0.81s]
+[0m11:47:27.414664 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_health_details_ID.d27c533750"
+[0m11:47:27.415040 [info ] [Thread-9 (]: 19 of 21 START test unique_stg_user_health_details_LOGIN_ID .................... [RUN]
+[0m11:47:27.416189 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.249 seconds
+[0m11:47:27.416781 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.196 seconds
+[0m11:47:27.417222 [debug] [Thread-7 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f
+[0m11:47:27.417543 [debug] [Thread-3 (]: On test.snowflake_project.unique_stg_user_health_details_ID.d27c533750: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_health_details_ID.d27c533750"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.417884 [debug] [Thread-9 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_health_details_ID.4559192351, now test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771)
+[0m11:47:27.419438 [info ] [Thread-6 (]: 11 of 21 PASS not_null_stg_user_personal_details_COUNTRY_ID .................... [[32mPASS[0m in 0.26s]
+[0m11:47:27.420873 [info ] [Thread-4 (]: 12 of 21 PASS not_null_stg_user_personal_details_ID ............................ [[32mPASS[0m in 0.21s]
+[0m11:47:27.421253 [debug] [Thread-7 (]: Began running node test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734
+[0m11:47:27.421838 [debug] [Thread-9 (]: Began compiling node test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771
+[0m11:47:27.422439 [debug] [Thread-6 (]: Finished running node test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a
+[0m11:47:27.422844 [debug] [Thread-4 (]: Finished running node test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5
+[0m11:47:27.423224 [info ] [Thread-7 (]: 20 of 21 START test unique_stg_user_personal_details_ID ........................ [RUN]
+[0m11:47:27.426152 [debug] [Thread-9 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771"
+[0m11:47:27.426670 [debug] [Thread-6 (]: Began running node test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f
+[0m11:47:27.427109 [debug] [Thread-7 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f, now test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734)
+[0m11:47:27.427457 [info ] [Thread-6 (]: 21 of 21 START test unique_stg_user_personal_details_LOGIN_ID .................. [RUN]
+[0m11:47:27.427797 [debug] [Thread-7 (]: Began compiling node test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734
+[0m11:47:27.428059 [debug] [Thread-6 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_personal_details_COUNTRY_ID.0da4d5956a, now test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f)
+[0m11:47:27.428301 [debug] [Thread-9 (]: Began executing node test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771
+[0m11:47:27.431976 [debug] [Thread-7 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734"
+[0m11:47:27.432248 [debug] [Thread-6 (]: Began compiling node test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f
+[0m11:47:27.433678 [debug] [Thread-9 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771"
+[0m11:47:27.436238 [debug] [Thread-6 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f"
+[0m11:47:27.436816 [debug] [Thread-7 (]: Began executing node test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734
+[0m11:47:27.438438 [debug] [Thread-7 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734"
+[0m11:47:27.438987 [debug] [Thread-9 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771"
+[0m11:47:27.439256 [debug] [Thread-6 (]: Began executing node test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f
+[0m11:47:27.439514 [debug] [Thread-9 (]: On test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    LOGIN_ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where LOGIN_ID is not null
+group by LOGIN_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.440842 [debug] [Thread-6 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f"
+[0m11:47:27.441269 [debug] [Thread-7 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734"
+[0m11:47:27.441976 [debug] [Thread-7 (]: On test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.442853 [debug] [Thread-6 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f"
+[0m11:47:27.443416 [debug] [Thread-6 (]: On test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    LOGIN_ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where LOGIN_ID is not null
+group by LOGIN_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:47:27.485183 [debug] [Thread-1 (]: Snowflake adapter: Snowflake query id: 01bbbf2b-0304-5d83-0003-5d620002f2de
+[0m11:47:27.485557 [debug] [Thread-1 (]: Snowflake adapter: Snowflake error: 000904 (42000): SQL compilation error: error line 11 at position 4
+invalid identifier 'EMAIL_ID'
+[0m11:47:27.488117 [debug] [Thread-1 (]: Database Error in test unique_stg_user_account_details_EMAIL_ID (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'EMAIL_ID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_EMAIL_ID.sql
+[0m11:47:27.488501 [error] [Thread-1 (]: 15 of 21 ERROR unique_stg_user_account_details_EMAIL_ID ........................ [[31mERROR[0m in 0.24s]
+[0m11:47:27.488894 [debug] [Thread-1 (]: Finished running node test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7
+[0m11:47:27.489240 [debug] [Thread-13 ]: Marking all children of 'test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7' to be skipped because of status 'error'.  Reason: Database Error in test unique_stg_user_account_details_EMAIL_ID (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'EMAIL_ID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_EMAIL_ID.sql.
+[0m11:47:27.494810 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.238 seconds
+[0m11:47:27.496330 [info ] [Thread-2 (]: 13 of 21 PASS not_null_stg_user_personal_details_LOGIN_ID ...................... [[32mPASS[0m in 0.26s]
+[0m11:47:27.496773 [debug] [Thread-2 (]: Finished running node test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd
+[0m11:47:27.516500 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 0.259 seconds
+[0m11:47:27.537478 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.116 seconds
+[0m11:47:27.536552 [info ] [Thread-10 ]: 14 of 21 PASS unique_stg_message_center_ID ..................................... [[32mPASS[0m in 0.30s]
+[0m11:47:27.538876 [info ] [Thread-3 (]: 18 of 21 PASS unique_stg_user_health_details_ID ................................ [[32mPASS[0m in 0.14s]
+[0m11:47:27.539358 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.241 seconds
+[0m11:47:27.539779 [debug] [Thread-10 ]: Finished running node test.snowflake_project.unique_stg_message_center_ID.b430c621ea
+[0m11:47:27.540076 [debug] [Thread-3 (]: Finished running node test.snowflake_project.unique_stg_user_health_details_ID.d27c533750
+[0m11:47:27.542111 [info ] [Thread-5 (]: 16 of 21 PASS unique_stg_user_account_details_ID ............................... [[32mPASS[0m in 0.25s]
+[0m11:47:27.549665 [debug] [Thread-5 (]: Finished running node test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6
+[0m11:47:27.550125 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 0.109 seconds
+[0m11:47:27.551391 [info ] [Thread-9 (]: 19 of 21 PASS unique_stg_user_health_details_LOGIN_ID .......................... [[32mPASS[0m in 0.13s]
+[0m11:47:27.551772 [debug] [Thread-9 (]: Finished running node test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771
+[0m11:47:27.556068 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 0.257 seconds
+[0m11:47:27.557225 [info ] [Thread-8 (]: 17 of 21 PASS unique_stg_user_account_details_LOGIN_ID ......................... [[32mPASS[0m in 0.27s]
+[0m11:47:27.557539 [debug] [Thread-8 (]: Finished running node test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1
+[0m11:47:27.729372 [debug] [Thread-7 (]: SQL status: SUCCESS 1 in 0.287 seconds
+[0m11:47:27.732053 [info ] [Thread-7 (]: 20 of 21 PASS unique_stg_user_personal_details_ID .............................. [[32mPASS[0m in 0.30s]
+[0m11:47:27.733336 [debug] [Thread-7 (]: Finished running node test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734
+[0m11:47:27.735185 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.291 seconds
+[0m11:47:27.737182 [info ] [Thread-6 (]: 21 of 21 PASS unique_stg_user_personal_details_LOGIN_ID ........................ [[32mPASS[0m in 0.31s]
+[0m11:47:27.737928 [debug] [Thread-6 (]: Finished running node test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f
+[0m11:47:27.740617 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:47:27.741192 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7' was left open.
+[0m11:47:27.741545 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_account_details_EMAIL_ID.cadbe771d7: Close
+[0m11:47:27.825012 [debug] [MainThread]: Connection 'test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd' was left open.
+[0m11:47:27.826197 [debug] [MainThread]: On test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd: Close
+[0m11:47:27.939120 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_health_details_ID.d27c533750' was left open.
+[0m11:47:27.940394 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_health_details_ID.d27c533750: Close
+[0m11:47:28.035579 [debug] [MainThread]: Connection 'test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5' was left open.
+[0m11:47:28.036305 [debug] [MainThread]: On test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5: Close
+[0m11:47:28.121046 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6' was left open.
+[0m11:47:28.121745 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6: Close
+[0m11:47:28.211125 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f' was left open.
+[0m11:47:28.211682 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f: Close
+[0m11:47:28.296163 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734' was left open.
+[0m11:47:28.296632 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734: Close
+[0m11:47:28.374677 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1' was left open.
+[0m11:47:28.375117 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1: Close
+[0m11:47:28.462132 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771' was left open.
+[0m11:47:28.462619 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771: Close
+[0m11:47:28.541627 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_message_center_ID.b430c621ea' was left open.
+[0m11:47:28.542354 [debug] [MainThread]: On test.snowflake_project.unique_stg_message_center_ID.b430c621ea: Close
+[0m11:47:28.628770 [info ] [MainThread]: 
+[0m11:47:28.629589 [info ] [MainThread]: Finished running 21 data tests in 0 hours 0 minutes and 2.58 seconds (2.58s).
+[0m11:47:28.634327 [debug] [MainThread]: Command end result
+[0m11:47:28.668147 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/manifest.json
+[0m11:47:28.670443 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/semantic_manifest.json
+[0m11:47:28.677002 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/run_results.json
+[0m11:47:28.677329 [info ] [MainThread]: 
+[0m11:47:28.677655 [info ] [MainThread]: [31mCompleted with 2 errors, 0 partial successes, and 0 warnings:[0m
+[0m11:47:28.677913 [info ] [MainThread]: 
+[0m11:47:28.678223 [error] [MainThread]:   Database Error in test not_null_stg_user_account_details_EMAIL_ID (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 12 at position 7
+  invalid identifier 'EMAIL_ID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/not_null_stg_user_account_details_EMAIL_ID.sql
+[0m11:47:28.678471 [info ] [MainThread]: 
+[0m11:47:28.678741 [error] [MainThread]:   Database Error in test unique_stg_user_account_details_EMAIL_ID (models/staging/schema.yaml)
+  000904 (42000): SQL compilation error: error line 11 at position 4
+  invalid identifier 'EMAIL_ID'
+  compiled code at target/run/snowflake_project/models/staging/schema.yaml/unique_stg_user_account_details_EMAIL_ID.sql
+[0m11:47:28.678981 [info ] [MainThread]: 
+[0m11:47:28.679242 [info ] [MainThread]: Done. PASS=19 WARN=0 ERROR=2 SKIP=0 TOTAL=21
+[0m11:47:28.681806 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": false, "command_wall_clock_time": 4.043315, "process_in_blocks": "0", "process_kernel_time": 0.948369, "process_mem_max_rss": "211353600", "process_out_blocks": "0", "process_user_time": 4.063194}
+[0m11:47:28.682197 [debug] [MainThread]: Command `dbt test` failed at 11:47:28.682128 after 4.04 seconds
+[0m11:47:28.682467 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13d7e65d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10481f590>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13e1f44a0>]}
+[0m11:47:28.682718 [debug] [MainThread]: Flushing usage events
+[0m11:47:29.190305 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:49:23.609585 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x104caf8c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051bfd10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051bfaa0>]}
+
+
+============================== 11:49:23.612352 | 5cd7a4f3-9a97-49d0-b419-9693f26cdf96 ==============================
+[0m11:49:23.612352 [info ] [MainThread]: Running with dbt=1.9.4
+[0m11:49:23.612729 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'quiet': 'False', 'no_print': 'None', 'introspect': 'True', 'fail_fast': 'False', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'warn_error': 'None', 'invocation_command': 'dbt test', 'debug': 'False', 'printer_width': '80', 'partial_parse': 'True', 'target_path': 'None', 'log_format': 'default', 'cache_selected_only': 'False', 'log_path': '/Users/manjunathreddy/snowflake_pipeline/snowflake_project/logs', 'log_cache_events': 'False', 'version_check': 'True', 'empty': 'None', 'use_experimental_parser': 'False', 'profiles_dir': '/Users/manjunathreddy/.dbt'}
+[0m11:49:24.359749 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5cd7a4f3-9a97-49d0-b419-9693f26cdf96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x127f37290>]}
+[0m11:49:24.385366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5cd7a4f3-9a97-49d0-b419-9693f26cdf96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1307bc3b0>]}
+[0m11:49:24.385850 [info ] [MainThread]: Registered adapter: snowflake=1.9.2
+[0m11:49:24.453635 [debug] [MainThread]: checksum: b5597158181700c50f5bc1c71fe28b37a6fb85633dc5323885263678b6bc782c, vars: {}, profile: , target: , version: 1.9.4
+[0m11:49:24.536100 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m11:49:24.536647 [debug] [MainThread]: Partial parsing: updated file: snowflake_project://models/staging/schema.yaml
+[0m11:49:24.786182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5cd7a4f3-9a97-49d0-b419-9693f26cdf96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1047246b0>]}
+[0m11:49:24.825361 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/manifest.json
+[0m11:49:24.827234 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/semantic_manifest.json
+[0m11:49:24.845947 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5cd7a4f3-9a97-49d0-b419-9693f26cdf96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1309fbf50>]}
+[0m11:49:24.846250 [info ] [MainThread]: Found 8 models, 20 data tests, 4 sources, 474 macros
+[0m11:49:24.846439 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5cd7a4f3-9a97-49d0-b419-9693f26cdf96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130de2600>]}
+[0m11:49:24.847623 [info ] [MainThread]: 
+[0m11:49:24.847824 [info ] [MainThread]: Concurrency: 10 threads (target='dev')
+[0m11:49:24.847975 [info ] [MainThread]: 
+[0m11:49:24.848226 [debug] [MainThread]: Acquiring new snowflake connection 'master'
+[0m11:49:24.850487 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_dbt_transformed_db_dbt_schema'
+[0m11:49:24.884926 [debug] [ThreadPool]: Using snowflake connection "list_dbt_transformed_db_dbt_schema"
+[0m11:49:24.885198 [debug] [ThreadPool]: On list_dbt_transformed_db_dbt_schema: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "connection_name": "list_dbt_transformed_db_dbt_schema"} */
+show objects in dbt_transformed_db.dbt_schema limit 10000;
+[0m11:49:24.885356 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:49:25.636993 [debug] [ThreadPool]: SQL status: SUCCESS 8 in 0.751 seconds
+[0m11:49:25.642707 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5cd7a4f3-9a97-49d0-b419-9693f26cdf96', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130dc0710>]}
+[0m11:49:25.647464 [debug] [Thread-1 (]: Began running node test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205
+[0m11:49:25.648168 [debug] [Thread-2 (]: Began running node test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c
+[0m11:49:25.648871 [debug] [Thread-3 (]: Began running node test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130
+[0m11:49:25.649816 [debug] [Thread-4 (]: Began running node test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0
+[0m11:49:25.650211 [debug] [Thread-5 (]: Began running node test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4
+[0m11:49:25.649436 [info ] [Thread-1 (]: 1 of 20 START test accepted_values_stg_message_center_IS_READ__Yes__No ......... [RUN]
+[0m11:49:25.650678 [debug] [Thread-6 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3
+[0m11:49:25.651040 [debug] [Thread-7 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f
+[0m11:49:25.651462 [debug] [Thread-8 (]: Began running node test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28
+[0m11:49:25.651880 [info ] [Thread-2 (]: 2 of 20 START test accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded  [RUN]
+[0m11:49:25.652394 [debug] [Thread-9 (]: Began running node test.snowflake_project.not_null_stg_user_health_details_ID.4559192351
+[0m11:49:25.652888 [debug] [Thread-10 ]: Began running node test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352
+[0m11:49:25.653326 [info ] [Thread-3 (]: 3 of 20 START test accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active  [RUN]
+[0m11:49:25.653810 [info ] [Thread-4 (]: 4 of 20 START test accepted_values_stg_user_health_details_GENDER__Male__Female  [RUN]
+[0m11:49:25.654235 [info ] [Thread-5 (]: 5 of 20 START test not_null_stg_message_center_ID .............................. [RUN]
+[0m11:49:25.655148 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_dbt_transformed_db_dbt_schema, now test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205)
+[0m11:49:25.655721 [info ] [Thread-6 (]: 6 of 20 START test not_null_stg_user_account_details_EMAIL ..................... [RUN]
+[0m11:49:25.656264 [info ] [Thread-7 (]: 7 of 20 START test not_null_stg_user_account_details_ID ........................ [RUN]
+[0m11:49:25.657053 [info ] [Thread-8 (]: 8 of 20 START test not_null_stg_user_account_details_LOGIN_ID .................. [RUN]
+[0m11:49:25.657754 [debug] [Thread-2 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c'
+[0m11:49:25.658208 [info ] [Thread-9 (]: 9 of 20 START test not_null_stg_user_health_details_ID ......................... [RUN]
+[0m11:49:25.658683 [info ] [Thread-10 ]: 10 of 20 START test not_null_stg_user_health_details_LOGIN_ID .................. [RUN]
+[0m11:49:25.659332 [debug] [Thread-3 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130'
+[0m11:49:25.659918 [debug] [Thread-4 (]: Acquiring new snowflake connection 'test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0'
+[0m11:49:25.660449 [debug] [Thread-5 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4'
+[0m11:49:25.661035 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205
+[0m11:49:25.661655 [debug] [Thread-6 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3'
+[0m11:49:25.662143 [debug] [Thread-7 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f'
+[0m11:49:25.662610 [debug] [Thread-8 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28'
+[0m11:49:25.662979 [debug] [Thread-2 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c
+[0m11:49:25.663420 [debug] [Thread-9 (]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_health_details_ID.4559192351'
+[0m11:49:25.663836 [debug] [Thread-10 ]: Acquiring new snowflake connection 'test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352'
+[0m11:49:25.664193 [debug] [Thread-3 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130
+[0m11:49:25.664571 [debug] [Thread-4 (]: Began compiling node test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0
+[0m11:49:25.664922 [debug] [Thread-5 (]: Began compiling node test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4
+[0m11:49:25.674926 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205"
+[0m11:49:25.675387 [debug] [Thread-6 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3
+[0m11:49:25.675706 [debug] [Thread-7 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f
+[0m11:49:25.676001 [debug] [Thread-8 (]: Began compiling node test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28
+[0m11:49:25.679462 [debug] [Thread-2 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c"
+[0m11:49:25.679837 [debug] [Thread-9 (]: Began compiling node test.snowflake_project.not_null_stg_user_health_details_ID.4559192351
+[0m11:49:25.680146 [debug] [Thread-10 ]: Began compiling node test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352
+[0m11:49:25.683169 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130"
+[0m11:49:25.686829 [debug] [Thread-4 (]: Writing injected SQL for node "test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0"
+[0m11:49:25.693615 [debug] [Thread-5 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4"
+[0m11:49:25.696280 [debug] [Thread-6 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3"
+[0m11:49:25.698753 [debug] [Thread-7 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f"
+[0m11:49:25.701002 [debug] [Thread-8 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28"
+[0m11:49:25.701267 [debug] [Thread-1 (]: Began executing node test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205
+[0m11:49:25.703565 [debug] [Thread-9 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_health_details_ID.4559192351"
+[0m11:49:25.705807 [debug] [Thread-10 ]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352"
+[0m11:49:25.706118 [debug] [Thread-2 (]: Began executing node test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c
+[0m11:49:25.706461 [debug] [Thread-3 (]: Began executing node test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130
+[0m11:49:25.706804 [debug] [Thread-4 (]: Began executing node test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0
+[0m11:49:25.707100 [debug] [Thread-5 (]: Began executing node test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4
+[0m11:49:25.712490 [debug] [Thread-7 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f
+[0m11:49:25.712779 [debug] [Thread-6 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3
+[0m11:49:25.719436 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205"
+[0m11:49:25.719742 [debug] [Thread-8 (]: Began executing node test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28
+[0m11:49:25.721238 [debug] [Thread-2 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c"
+[0m11:49:25.722476 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130"
+[0m11:49:25.722699 [debug] [Thread-9 (]: Began executing node test.snowflake_project.not_null_stg_user_health_details_ID.4559192351
+[0m11:49:25.723950 [debug] [Thread-4 (]: Writing runtime sql for node "test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0"
+[0m11:49:25.724161 [debug] [Thread-10 ]: Began executing node test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352
+[0m11:49:25.725930 [debug] [Thread-5 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4"
+[0m11:49:25.727014 [debug] [Thread-7 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f"
+[0m11:49:25.728250 [debug] [Thread-6 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3"
+[0m11:49:25.729398 [debug] [Thread-8 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28"
+[0m11:49:25.730010 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205"
+[0m11:49:25.731120 [debug] [Thread-9 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_health_details_ID.4559192351"
+[0m11:49:25.731628 [debug] [Thread-2 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c"
+[0m11:49:25.732121 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130"
+[0m11:49:25.733364 [debug] [Thread-10 ]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352"
+[0m11:49:25.733971 [debug] [Thread-4 (]: Using snowflake connection "test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0"
+[0m11:49:25.734435 [debug] [Thread-5 (]: Using snowflake connection "test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4"
+[0m11:49:25.734682 [debug] [Thread-1 (]: On test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        IS_READ as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_message_center
+    group by IS_READ
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Yes','No'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.735102 [debug] [Thread-7 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f"
+[0m11:49:25.735422 [debug] [Thread-6 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3"
+[0m11:49:25.735745 [debug] [Thread-8 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28"
+[0m11:49:25.736045 [debug] [Thread-2 (]: On test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        HEALTH_DETAILS_STATUS as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_account_details
+    group by HEALTH_DETAILS_STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Uploaded','Not Uploaded'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.736300 [debug] [Thread-3 (]: On test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        PERSONAL_DETAILS_STATUS as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_account_details
+    group by PERSONAL_DETAILS_STATUS
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Registered','Active'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.736638 [debug] [Thread-9 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_health_details_ID.4559192351"
+[0m11:49:25.736892 [debug] [Thread-4 (]: On test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        GENDER as value_field,
+        count(*) as n_records
+
+    from dbt_transformed_db.dbt_schema.stg_user_health_details
+    group by GENDER
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Male','Female'
+)
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.737135 [debug] [Thread-5 (]: On test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from dbt_transformed_db.dbt_schema.stg_message_center
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.737615 [debug] [Thread-10 ]: Using snowflake connection "test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352"
+[0m11:49:25.738086 [debug] [Thread-7 (]: On test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.738475 [debug] [Thread-6 (]: On test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select EMAIL
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where EMAIL is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.738744 [debug] [Thread-8 (]: On test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LOGIN_ID
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where LOGIN_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.739069 [debug] [Thread-2 (]: Opening a new connection, currently in state init
+[0m11:49:25.739353 [debug] [Thread-3 (]: Opening a new connection, currently in state init
+[0m11:49:25.739601 [debug] [Thread-9 (]: On test.snowflake_project.not_null_stg_user_health_details_ID.4559192351: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_health_details_ID.4559192351"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.739815 [debug] [Thread-4 (]: Opening a new connection, currently in state init
+[0m11:49:25.740059 [debug] [Thread-5 (]: Opening a new connection, currently in state init
+[0m11:49:25.740258 [debug] [Thread-10 ]: On test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LOGIN_ID
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where LOGIN_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.740449 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m11:49:25.740617 [debug] [Thread-6 (]: Opening a new connection, currently in state init
+[0m11:49:25.740860 [debug] [Thread-8 (]: Opening a new connection, currently in state init
+[0m11:49:25.742385 [debug] [Thread-9 (]: Opening a new connection, currently in state init
+[0m11:49:25.745622 [debug] [Thread-10 ]: Opening a new connection, currently in state init
+[0m11:49:25.829766 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.092 seconds
+[0m11:49:25.836209 [info ] [Thread-1 (]: 1 of 20 PASS accepted_values_stg_message_center_IS_READ__Yes__No ............... [[32mPASS[0m in 0.18s]
+[0m11:49:25.836650 [debug] [Thread-1 (]: Finished running node test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205
+[0m11:49:25.836892 [debug] [Thread-1 (]: Began running node test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5
+[0m11:49:25.837179 [info ] [Thread-1 (]: 11 of 20 START test not_null_stg_user_personal_details_ID ...................... [RUN]
+[0m11:49:25.837467 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_message_center_IS_READ__Yes__No.022d413205, now test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5)
+[0m11:49:25.837676 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5
+[0m11:49:25.839913 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5"
+[0m11:49:25.840417 [debug] [Thread-1 (]: Began executing node test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5
+[0m11:49:25.841687 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5"
+[0m11:49:25.842260 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5"
+[0m11:49:25.842501 [debug] [Thread-1 (]: On test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select ID
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:25.936305 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.093 seconds
+[0m11:49:25.937762 [info ] [Thread-1 (]: 11 of 20 PASS not_null_stg_user_personal_details_ID ............................ [[32mPASS[0m in 0.10s]
+[0m11:49:25.938276 [debug] [Thread-1 (]: Finished running node test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5
+[0m11:49:25.941158 [debug] [Thread-1 (]: Began running node test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd
+[0m11:49:25.942068 [info ] [Thread-1 (]: 12 of 20 START test not_null_stg_user_personal_details_LOGIN_ID ................ [RUN]
+[0m11:49:25.942475 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_personal_details_ID.67e99625e5, now test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd)
+[0m11:49:25.942935 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd
+[0m11:49:25.945711 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd"
+[0m11:49:25.952033 [debug] [Thread-1 (]: Began executing node test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd
+[0m11:49:25.954024 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd"
+[0m11:49:25.955190 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd"
+[0m11:49:25.955852 [debug] [Thread-1 (]: On test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+
+
+select LOGIN_ID
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where LOGIN_ID is null
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.069146 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.111 seconds
+[0m11:49:26.071459 [info ] [Thread-1 (]: 12 of 20 PASS not_null_stg_user_personal_details_LOGIN_ID ...................... [[32mPASS[0m in 0.13s]
+[0m11:49:26.072063 [debug] [Thread-1 (]: Finished running node test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd
+[0m11:49:26.072432 [debug] [Thread-1 (]: Began running node test.snowflake_project.unique_stg_message_center_ID.b430c621ea
+[0m11:49:26.072748 [info ] [Thread-1 (]: 13 of 20 START test unique_stg_message_center_ID ............................... [RUN]
+[0m11:49:26.073169 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_personal_details_LOGIN_ID.956f7415dd, now test.snowflake_project.unique_stg_message_center_ID.b430c621ea)
+[0m11:49:26.073558 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.unique_stg_message_center_ID.b430c621ea
+[0m11:49:26.079334 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_message_center_ID.b430c621ea"
+[0m11:49:26.081804 [debug] [Thread-1 (]: Began executing node test.snowflake_project.unique_stg_message_center_ID.b430c621ea
+[0m11:49:26.084054 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_message_center_ID.b430c621ea"
+[0m11:49:26.085398 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.unique_stg_message_center_ID.b430c621ea"
+[0m11:49:26.085779 [debug] [Thread-1 (]: On test.snowflake_project.unique_stg_message_center_ID.b430c621ea: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_message_center_ID.b430c621ea"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_message_center
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.133322 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.394 seconds
+[0m11:49:26.135283 [info ] [Thread-2 (]: 2 of 20 PASS accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded  [[32mPASS[0m in 0.48s]
+[0m11:49:26.135803 [debug] [Thread-2 (]: Finished running node test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c
+[0m11:49:26.136134 [debug] [Thread-2 (]: Began running node test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209
+[0m11:49:26.136463 [info ] [Thread-2 (]: 14 of 20 START test unique_stg_user_account_details_EMAIL ...................... [RUN]
+[0m11:49:26.136842 [debug] [Thread-2 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_user_account_details_HEALTH_DETAILS_STATUS__Uploaded__Not_Uploaded.0e171db85c, now test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209)
+[0m11:49:26.137145 [debug] [Thread-2 (]: Began compiling node test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209
+[0m11:49:26.140310 [debug] [Thread-2 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209"
+[0m11:49:26.140916 [debug] [Thread-2 (]: Began executing node test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209
+[0m11:49:26.144105 [debug] [Thread-2 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209"
+[0m11:49:26.144931 [debug] [Thread-2 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209"
+[0m11:49:26.145210 [debug] [Thread-2 (]: On test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    EMAIL as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where EMAIL is not null
+group by EMAIL
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.185190 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.445 seconds
+[0m11:49:26.187180 [info ] [Thread-5 (]: 5 of 20 PASS not_null_stg_message_center_ID .................................... [[32mPASS[0m in 0.53s]
+[0m11:49:26.187713 [debug] [Thread-5 (]: Finished running node test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4
+[0m11:49:26.188068 [debug] [Thread-5 (]: Began running node test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6
+[0m11:49:26.188478 [info ] [Thread-5 (]: 15 of 20 START test unique_stg_user_account_details_ID ......................... [RUN]
+[0m11:49:26.188936 [debug] [Thread-5 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_message_center_ID.fda5cfe1c4, now test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6)
+[0m11:49:26.189260 [debug] [Thread-5 (]: Began compiling node test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6
+[0m11:49:26.192382 [debug] [Thread-5 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6"
+[0m11:49:26.193488 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.454 seconds
+[0m11:49:26.195127 [info ] [Thread-3 (]: 3 of 20 PASS accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active  [[32mPASS[0m in 0.54s]
+[0m11:49:26.195681 [debug] [Thread-3 (]: Finished running node test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130
+[0m11:49:26.196241 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 0.454 seconds
+[0m11:49:26.196550 [debug] [Thread-3 (]: Began running node test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1
+[0m11:49:26.196792 [debug] [Thread-5 (]: Began executing node test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6
+[0m11:49:26.198682 [info ] [Thread-9 (]: 9 of 20 PASS not_null_stg_user_health_details_ID ............................... [[32mPASS[0m in 0.54s]
+[0m11:49:26.199059 [info ] [Thread-3 (]: 16 of 20 START test unique_stg_user_account_details_LOGIN_ID ................... [RUN]
+[0m11:49:26.201360 [debug] [Thread-5 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6"
+[0m11:49:26.201870 [debug] [Thread-9 (]: Finished running node test.snowflake_project.not_null_stg_user_health_details_ID.4559192351
+[0m11:49:26.202213 [debug] [Thread-3 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_user_account_details_PERSONAL_DETAILS_STATUS__Registered__Active.b87c5d0130, now test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1)
+[0m11:49:26.202617 [debug] [Thread-9 (]: Began running node test.snowflake_project.unique_stg_user_health_details_ID.d27c533750
+[0m11:49:26.202927 [debug] [Thread-3 (]: Began compiling node test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1
+[0m11:49:26.203462 [debug] [Thread-5 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6"
+[0m11:49:26.203728 [info ] [Thread-9 (]: 17 of 20 START test unique_stg_user_health_details_ID .......................... [RUN]
+[0m11:49:26.206539 [debug] [Thread-3 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1"
+[0m11:49:26.207102 [debug] [Thread-5 (]: On test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.207628 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.122 seconds
+[0m11:49:26.207880 [debug] [Thread-9 (]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_health_details_ID.4559192351, now test.snowflake_project.unique_stg_user_health_details_ID.d27c533750)
+[0m11:49:26.209676 [info ] [Thread-1 (]: 13 of 20 PASS unique_stg_message_center_ID ..................................... [[32mPASS[0m in 0.14s]
+[0m11:49:26.210146 [debug] [Thread-9 (]: Began compiling node test.snowflake_project.unique_stg_user_health_details_ID.d27c533750
+[0m11:49:26.210393 [debug] [Thread-3 (]: Began executing node test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1
+[0m11:49:26.210875 [debug] [Thread-1 (]: Finished running node test.snowflake_project.unique_stg_message_center_ID.b430c621ea
+[0m11:49:26.213636 [debug] [Thread-9 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_health_details_ID.d27c533750"
+[0m11:49:26.215588 [debug] [Thread-3 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1"
+[0m11:49:26.216266 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.476 seconds
+[0m11:49:26.216731 [debug] [Thread-1 (]: Began running node test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771
+[0m11:49:26.217131 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 0.472 seconds
+[0m11:49:26.217575 [debug] [Thread-8 (]: SQL status: SUCCESS 1 in 0.477 seconds
+[0m11:49:26.218034 [debug] [Thread-7 (]: SQL status: SUCCESS 1 in 0.478 seconds
+[0m11:49:26.219497 [info ] [Thread-4 (]: 4 of 20 PASS accepted_values_stg_user_health_details_GENDER__Male__Female ...... [[32mPASS[0m in 0.56s]
+[0m11:49:26.219823 [info ] [Thread-1 (]: 18 of 20 START test unique_stg_user_health_details_LOGIN_ID .................... [RUN]
+[0m11:49:26.221415 [debug] [Thread-3 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1"
+[0m11:49:26.221622 [debug] [Thread-9 (]: Began executing node test.snowflake_project.unique_stg_user_health_details_ID.d27c533750
+[0m11:49:26.220968 [info ] [Thread-10 ]: 10 of 20 PASS not_null_stg_user_health_details_LOGIN_ID ........................ [[32mPASS[0m in 0.56s]
+[0m11:49:26.222854 [info ] [Thread-8 (]: 8 of 20 PASS not_null_stg_user_account_details_LOGIN_ID ........................ [[32mPASS[0m in 0.56s]
+[0m11:49:26.223914 [info ] [Thread-7 (]: 7 of 20 PASS not_null_stg_user_account_details_ID .............................. [[32mPASS[0m in 0.56s]
+[0m11:49:26.224294 [debug] [Thread-4 (]: Finished running node test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0
+[0m11:49:26.224550 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.snowflake_project.unique_stg_message_center_ID.b430c621ea, now test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771)
+[0m11:49:26.224806 [debug] [Thread-3 (]: On test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    LOGIN_ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_account_details
+where LOGIN_ID is not null
+group by LOGIN_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.226365 [debug] [Thread-9 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_health_details_ID.d27c533750"
+[0m11:49:26.226676 [debug] [Thread-10 ]: Finished running node test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352
+[0m11:49:26.226967 [debug] [Thread-8 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28
+[0m11:49:26.227252 [debug] [Thread-7 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f
+[0m11:49:26.227491 [debug] [Thread-4 (]: Began running node test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734
+[0m11:49:26.227713 [debug] [Thread-1 (]: Began compiling node test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771
+[0m11:49:26.228381 [debug] [Thread-10 ]: Began running node test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f
+[0m11:49:26.229183 [debug] [Thread-9 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_health_details_ID.d27c533750"
+[0m11:49:26.229528 [info ] [Thread-4 (]: 19 of 20 START test unique_stg_user_personal_details_ID ........................ [RUN]
+[0m11:49:26.231810 [debug] [Thread-1 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771"
+[0m11:49:26.232113 [info ] [Thread-10 ]: 20 of 20 START test unique_stg_user_personal_details_LOGIN_ID .................. [RUN]
+[0m11:49:26.232365 [debug] [Thread-9 (]: On test.snowflake_project.unique_stg_user_health_details_ID.d27c533750: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_health_details_ID.d27c533750"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.232617 [debug] [Thread-4 (]: Re-using an available connection from the pool (formerly test.snowflake_project.accepted_values_stg_user_health_details_GENDER__Male__Female.40d4392ba0, now test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734)
+[0m11:49:26.232885 [debug] [Thread-10 ]: Re-using an available connection from the pool (formerly test.snowflake_project.not_null_stg_user_health_details_LOGIN_ID.aebcb2e352, now test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f)
+[0m11:49:26.233273 [debug] [Thread-4 (]: Began compiling node test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734
+[0m11:49:26.233600 [debug] [Thread-1 (]: Began executing node test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771
+[0m11:49:26.233841 [debug] [Thread-10 ]: Began compiling node test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f
+[0m11:49:26.236456 [debug] [Thread-4 (]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734"
+[0m11:49:26.238034 [debug] [Thread-1 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771"
+[0m11:49:26.240096 [debug] [Thread-10 ]: Writing injected SQL for node "test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f"
+[0m11:49:26.240588 [debug] [Thread-4 (]: Began executing node test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734
+[0m11:49:26.241060 [debug] [Thread-1 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771"
+[0m11:49:26.243246 [debug] [Thread-4 (]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734"
+[0m11:49:26.243480 [debug] [Thread-1 (]: On test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    LOGIN_ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_health_details
+where LOGIN_ID is not null
+group by LOGIN_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.243685 [debug] [Thread-10 ]: Began executing node test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f
+[0m11:49:26.245245 [debug] [Thread-10 ]: Writing runtime sql for node "test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f"
+[0m11:49:26.245758 [debug] [Thread-4 (]: Using snowflake connection "test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734"
+[0m11:49:26.246094 [debug] [Thread-4 (]: On test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where ID is not null
+group by ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.246622 [debug] [Thread-10 ]: Using snowflake connection "test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f"
+[0m11:49:26.247224 [debug] [Thread-10 ]: On test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f: /* {"app": "dbt", "dbt_version": "1.9.4", "profile_name": "snowflake_project", "target_name": "dev", "node_id": "test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    LOGIN_ID as unique_field,
+    count(*) as n_records
+
+from dbt_transformed_db.dbt_schema.stg_user_personal_details
+where LOGIN_ID is not null
+group by LOGIN_ID
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+[0m11:49:26.249169 [debug] [Thread-2 (]: SQL status: SUCCESS 1 in 0.104 seconds
+[0m11:49:26.250231 [info ] [Thread-2 (]: 14 of 20 PASS unique_stg_user_account_details_EMAIL ............................ [[32mPASS[0m in 0.11s]
+[0m11:49:26.250579 [debug] [Thread-2 (]: Finished running node test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209
+[0m11:49:26.289322 [debug] [Thread-6 (]: SQL status: SUCCESS 1 in 0.549 seconds
+[0m11:49:26.290757 [info ] [Thread-6 (]: 6 of 20 PASS not_null_stg_user_account_details_EMAIL ........................... [[32mPASS[0m in 0.63s]
+[0m11:49:26.291155 [debug] [Thread-6 (]: Finished running node test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3
+[0m11:49:26.295538 [debug] [Thread-5 (]: SQL status: SUCCESS 1 in 0.087 seconds
+[0m11:49:26.296858 [info ] [Thread-5 (]: 15 of 20 PASS unique_stg_user_account_details_ID ............................... [[32mPASS[0m in 0.11s]
+[0m11:49:26.297232 [debug] [Thread-5 (]: Finished running node test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6
+[0m11:49:26.349768 [debug] [Thread-3 (]: SQL status: SUCCESS 1 in 0.122 seconds
+[0m11:49:26.350393 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 0.106 seconds
+[0m11:49:26.351755 [info ] [Thread-3 (]: 16 of 20 PASS unique_stg_user_account_details_LOGIN_ID ......................... [[32mPASS[0m in 0.15s]
+[0m11:49:26.352914 [info ] [Thread-1 (]: 18 of 20 PASS unique_stg_user_health_details_LOGIN_ID .......................... [[32mPASS[0m in 0.13s]
+[0m11:49:26.353554 [debug] [Thread-9 (]: SQL status: SUCCESS 1 in 0.120 seconds
+[0m11:49:26.354203 [debug] [Thread-4 (]: SQL status: SUCCESS 1 in 0.107 seconds
+[0m11:49:26.354579 [debug] [Thread-3 (]: Finished running node test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1
+[0m11:49:26.355179 [debug] [Thread-10 ]: SQL status: SUCCESS 1 in 0.108 seconds
+[0m11:49:26.355481 [debug] [Thread-1 (]: Finished running node test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771
+[0m11:49:26.356543 [info ] [Thread-9 (]: 17 of 20 PASS unique_stg_user_health_details_ID ................................ [[32mPASS[0m in 0.15s]
+[0m11:49:26.357709 [info ] [Thread-4 (]: 19 of 20 PASS unique_stg_user_personal_details_ID .............................. [[32mPASS[0m in 0.13s]
+[0m11:49:26.359117 [info ] [Thread-10 ]: 20 of 20 PASS unique_stg_user_personal_details_LOGIN_ID ........................ [[32mPASS[0m in 0.13s]
+[0m11:49:26.359683 [debug] [Thread-9 (]: Finished running node test.snowflake_project.unique_stg_user_health_details_ID.d27c533750
+[0m11:49:26.360019 [debug] [Thread-4 (]: Finished running node test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734
+[0m11:49:26.360288 [debug] [Thread-10 ]: Finished running node test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f
+[0m11:49:26.361276 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:49:26.361492 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771' was left open.
+[0m11:49:26.361680 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_health_details_LOGIN_ID.25074af771: Close
+[0m11:49:26.435824 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209' was left open.
+[0m11:49:26.436265 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_account_details_EMAIL.b59b198209: Close
+[0m11:49:26.509047 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1' was left open.
+[0m11:49:26.509664 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_account_details_LOGIN_ID.8926893fe1: Close
+[0m11:49:26.584689 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734' was left open.
+[0m11:49:26.585484 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_personal_details_ID.5e6ed9e734: Close
+[0m11:49:26.673966 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6' was left open.
+[0m11:49:26.674671 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_account_details_ID.3cb288c2e6: Close
+[0m11:49:26.757114 [debug] [MainThread]: Connection 'test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3' was left open.
+[0m11:49:26.757739 [debug] [MainThread]: On test.snowflake_project.not_null_stg_user_account_details_EMAIL.8edc2b26e3: Close
+[0m11:49:26.841821 [debug] [MainThread]: Connection 'test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f' was left open.
+[0m11:49:26.842485 [debug] [MainThread]: On test.snowflake_project.not_null_stg_user_account_details_ID.9a73a6e53f: Close
+[0m11:49:26.934635 [debug] [MainThread]: Connection 'test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28' was left open.
+[0m11:49:26.935371 [debug] [MainThread]: On test.snowflake_project.not_null_stg_user_account_details_LOGIN_ID.b31d536a28: Close
+[0m11:49:27.012667 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_health_details_ID.d27c533750' was left open.
+[0m11:49:27.013459 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_health_details_ID.d27c533750: Close
+[0m11:49:27.092606 [debug] [MainThread]: Connection 'test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f' was left open.
+[0m11:49:27.093589 [debug] [MainThread]: On test.snowflake_project.unique_stg_user_personal_details_LOGIN_ID.9b0893f37f: Close
+[0m11:49:27.191273 [info ] [MainThread]: 
+[0m11:49:27.192105 [info ] [MainThread]: Finished running 20 data tests in 0 hours 0 minutes and 2.34 seconds (2.34s).
+[0m11:49:27.196418 [debug] [MainThread]: Command end result
+[0m11:49:27.227490 [debug] [MainThread]: Wrote artifact WritableManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/manifest.json
+[0m11:49:27.229072 [debug] [MainThread]: Wrote artifact SemanticManifest to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/semantic_manifest.json
+[0m11:49:27.235645 [debug] [MainThread]: Wrote artifact RunExecutionResult to /Users/manjunathreddy/snowflake_pipeline/snowflake_project/target/run_results.json
+[0m11:49:27.235925 [info ] [MainThread]: 
+[0m11:49:27.236215 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:49:27.236467 [info ] [MainThread]: 
+[0m11:49:27.236726 [info ] [MainThread]: Done. PASS=20 WARN=0 ERROR=0 SKIP=0 TOTAL=20
+[0m11:49:27.239467 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 3.6687362, "process_in_blocks": "0", "process_kernel_time": 0.968352, "process_mem_max_rss": "208683008", "process_out_blocks": "0", "process_user_time": 3.936291}
+[0m11:49:27.239976 [debug] [MainThread]: Command `dbt test` succeeded at 11:49:27.239896 after 3.67 seconds
+[0m11:49:27.240302 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1051bfcb0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x130dc3b30>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x13098ae40>]}
+[0m11:49:27.240598 [debug] [MainThread]: Flushing usage events
+[0m11:49:27.731529 [debug] [MainThread]: An error was encountered while trying to flush usage events
